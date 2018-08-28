@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=0.5, user-scalable=no">
+    <title>Voluntary.net</title>
+    <link href="Fonts/fonts.css" rel="stylesheet" type="text/css">
+    <link href="page.css" rel="stylesheet" type="text/css">
+    <link href="LT-WebFonts-183869599/fonts_univers.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <!-- begin header -->
+    
+    <div class="Header">
+        <div class="HeaderContent">
+            <img class="AppIcon" src="./images/voluntaryapp_black.svg"></img>
+            <a href="index.html">
+                <div class="PageTitle">Voluntary<div class="PageTitleSuffix">Net</div></div>
+            </a>
+
+            <div class="HPageMenus">
+                <a href="index.html"><div class="HPageMenu">Introduction</div></a>
+                <a href="docs.html"><div class="HPageMenu HPageMenu_Selected">Architecture</div></a>
+                <a href="status.html"><div class="HPageMenu">Status</div></a>
+                <a href="team.html"><div class="HPageMenu">Team</div></a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- end header -->
+    
+    <div class="Page">
+
+        <!-- begin page section -->
+                
+        
+        <div class="SectionTitle1">
+            Architecture
+        </div>
+
+        <div class="VSection">
+            <div class="SectionTitle2">Identities</div>
+            <div class="SectionContent">
+                <div class="List">
+                    <div class="ListItem">Identities are public keys.</div>
+                    <div class="ListItem">Private keys and data are held client-side.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="VSection">
+            <div class="SectionTitle2">
+                Discovery
+            </div>
+
+            <div class="SectionContent">
+                <div class="List">
+                    <div class="ListItem">User nodes discover online friend nodes via rendezvous nodes.</div>
+                    <div class="ListItem">Anyone can add a rendezvous node to the network.</div>
+                    <div class="ListItem">Identities are not tied to rendezvous nodes.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="VSection">
+            <div class="SectionTitle2">
+                Messaging
+            </div>
+
+            <div class="SectionContent">
+                <div class="List">
+                    <div class="ListItem">Messages are sent directly between client nodes.</div>
+                    <div class="ListItem">Each message is encrypted for receiver and signed by sender.</div>
+                    <div class="ListItem">Users cache and relay messages signed by identities they follow.</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- end page section -->
+
+
+
+        <!--
+        <div class="Diagram">
+            <div class="DiagramSection">
+
+                <div class="Label">
+                    Peers
+                </div>
+                
+                <div class="Box">
+                    P
+                </div>
+            
+                <div class="Box">
+                    P
+                </div>
+            
+                <div class="Box">
+                    P
+                </div>
+            
+            </div>
+            
+            <div class="DiagramSection">
+
+                <div class="Label">
+                    Redezvous Servers<br>
+                </div>
+                
+                <div class="Box">
+                    R
+                </div>
+            
+                <div class="Box">
+                    R
+                </div>
+            
+                <div class="Box">
+                    R
+                </div>
+            
+            </div>
+            
+        </div>
+        -->
+        
+    </div>
+</body>
+
+</html>

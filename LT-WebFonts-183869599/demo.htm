@@ -1,0 +1,1876 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Linotype.com Web Fonts Demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <style>
+   
+    body {
+        background: #fff;
+        font-family: "Helvetica", "Arial", "sans-serif";
+        font-size: 15px;
+        line-height: 24px;
+        color: #202020;
+        line-height: 24px;
+        margin: 0;
+        padding: 0;
+    }
+    
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .clear {
+        clear: both;
+    }
+    
+    header a {
+        padding: 25px 0 0 25px;
+        display: block;
+    }
+    
+    .container {
+        max-width: 825px;
+        width: 100%;
+        margin: 52px auto;
+    }
+    
+    .entry-content {
+        padding: 0 120px;
+        text-align: center;
+    }
+    
+    .font-contained {
+        margin-top: 55px;
+    }
+    
+    .note-bg {
+        background: #000;
+        padding:2em;
+    }
+    
+    pre {
+        color: #fff;
+       
+        margin: 0;
+        white-space: pre-line;
+        font-size: 13px;
+    }
+    
+    #text-data {
+        color: #fff;
+        font-size: 16px;
+        line-height: 30px;
+        height: 100%;
+        outline: none;
+        padding: 30px;
+    }
+    
+    .accordion {
+        overflow: hidden;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+        background: #f7f7f7;
+    }
+    
+    .accordionButton {
+        background: #f9f9f7;
+        border-bottom: 1px solid #e2e3de;
+        border-left: 5px solid #e2e3de;
+        cursor: pointer;
+        padding: 20px 0px;
+        font-size: 20px;
+    }
+    
+    .accordionButton span {
+        color: #262624;
+        padding-left: 5px;
+        //font-weight: bold;
+        width: 12px;
+    }
+    
+    .accordionContent {
+        background: Ef9f9f7;
+        clear: both;
+        border-left: 5px solid #c00;
+        padding-left: 20px;
+    }
+    
+    .accordionContent ul {
+        width: 80%;
+        list-style: none;
+    }
+    
+    .accordionContent ul li {
+        font-size: 16px;
+        padding: 5px 0 18px 0;
+        margin: 0;
+        border-top: 1px solid #e2e3de;
+    }
+    
+    .accordionContent ul li:first-child {
+        border-top: none;
+        padding-top: 30px;
+    }
+    
+    .accordionContent ul li span {
+        background: #e4e4da;
+        display: block;
+        float: right;
+        width: 180px;
+        height: 35px;
+        text-align: center;
+        line-height: 35px;
+    }
+    
+    .accordionContent ul li span a {
+        color: #202020;
+        text-decoration: none;
+    }
+    
+    .accordionContent ul li span a:hover {
+        text-decoration: underline;
+    }
+    
+    .on {
+        background: #f2f2f1;
+        cursor: pointer;
+        border-left: 5px solid #c00;
+    }
+    
+    .on span {
+        color: #262624;
+    }
+    
+    .over {
+        background: #f2f2f1;
+        cursor: pointer;
+    }
+    
+    .over span {
+        color: #262624;
+    }
+    
+    .plusMinus {
+        font-weight: bold;
+        float: left;
+        padding-right: 4px;
+        content: "+";
+    }
+    
+    .font-label {
+        color: #acada8 !important;
+        font-size: 14px;
+    }
+    
+    .light-font {
+        font-family: "Helvetica", "Arial", "sans-serif";
+    }
+    
+    .heavy-font {
+        font-family: "Helvetica", "Arial", "sans-serif";
+        font-weight: bold;
+    }
+    
+    h2 {
+        font-size: 1.2em;
+        color: #000;
+        padding-bottom: 0.4em;
+        margin-top: 1.5em;
+    }
+    
+    .demo {
+        font-weight: bold;
+        font-style: normal;
+    }
+    
+    .fontdisplay {
+        font-size: 2em;
+        line-height: 150%;
+        margin: 10px 40px 0px 0px;
+    }
+    
+    .guidelines {
+        margin-top: 55px;
+    }
+    
+    .guidelines ul {
+        list-style: none;
+    }
+    
+    .guidelines ul li span {
+        font-weight: bold;
+    }
+    
+    hr {
+        border: 0;
+        border-bottom: 1px solid #888582;
+        margin: 20px 0;
+    }
+    
+    .link {
+        color: #537094;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .uc {
+        text-transform: uppercase;
+        margin: 30px 0 20px 0;
+    }
+	.code-wrapper {
+    	background: #000;
+		color:#fff;
+		font-size: 13px;
+		padding: 0 2em;
+		height:400px;
+		overflow: auto;
+		word-wrap: normal;
+		white-space: pre;
+	}
+	/*Scroll open*/	
+	
+    .scrollTo-demo .content {
+        height: 290px;
+    }
+    
+    .scrollTo-demo .demo-y {
+        height: 600px;
+    }
+    
+    .alignCenter {
+        text-align: center;
+    }
+    
+    .scrollTo-demo .demo-x {
+        width: 660px;
+        background-color: #252525;
+    }
+    
+    .scrollTo-demo .demo-x p {
+        float: left;
+        width: 300px;
+        margin-left: 30px;
+        height: auto;
+        padding: 5px 10px;
+        background-color: #333;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+    
+    .scrollTo-demo .demo-x hr + p {
+        margin-left: 0;
+    }
+    
+    .scrollTo-demo .demo-yx {
+        background-color: #424242;
+    }
+    
+    .scrollTo-demo .demo-yx p {
+        width: 1000px;
+    }
+    
+    .scrollTo {
+        font-size: 12px;
+    }
+    
+    .scrollTo + .scrollTo {
+        margin-top: 20px;
+    }
+    
+    .scrollTo ul li:first-child span {
+        display: block;
+        padding: 3px 15px;
+    }
+    
+    #test-id {
+        background-color: #eb3755;
+        color: #fff;
+    }
+    
+    .rtl-demo #content-1 {
+        width: 500px;
+    }
+    
+    .rtl-demo #content-1 p {
+        width: 1000px;
+    }
+    
+    .transitions #examples {
+        -webkit-perspective: 1000;
+        -moz-perspective: 1000;
+    }
+    
+    .transitions .content {
+        -webkit-transition: all .6s ease-out;
+        -moz-transition: all .6s ease-out;
+        -o-transition: all .6s ease-out;
+        transition: all .6s ease-out;
+    }
+    
+    .footernote {
+        margin-top: 70px;
+    }
+    
+    .footernote span {
+        background: #e5e5d9;
+        padding: 15px 25px;
+        font-size: 16px;
+    }
+    
+    .footernote span a {
+        font-size: 16px;
+        color: #999;
+        text-decoration: none;
+    }
+    
+    .footernote span a:hover {
+        text-decoration: underline;
+    }
+    
+    footer {
+        max-width: 825px;
+        width: 100%;
+        margin: 80px auto;
+        text-align: center;
+    }
+    
+    footer,
+    footer a {
+        color: #bebebe;
+        text-decoration: none;
+    }
+    
+    footer a:hover {
+        color: #7b7b7b;
+    }
+
+    /*--- Tabs ---*/
+    
+    .tabs input[type=radio] {
+        display: none;
+        visibility: hidden;
+    }
+           
+    .tabs {
+        width: 100%;
+        float: none;
+        list-style: none;
+        position: relative;
+        padding: 0;
+        margin: 35px auto 0px;
+        height: 600px;
+    }
+           
+    .tabs li{
+        float: left;
+    }
+           
+    .tabs label {
+        display: block;
+        padding: 10px 20px;
+        color: #000;
+        font-size: 16px;
+        font-weight: normal;
+        background: #fafaf8;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+    }
+           
+    .tab-content {
+        z-index: 2;
+        display: none;
+        left: 0;
+        width: 100%;
+        font-size: 15px;
+        line-height: 140%;
+        padding: 15px;
+        position: absolute;
+        box-sizing: border-box;
+        /*border:1px solid #ccc;*/
+        border-top: 6px solid #e5e5db;
+        background-color:#ffffff;
+    }
+
+    #tab-content1 {
+      display: block;
+    }
+
+    [id^=tab]:checked + label {
+        background: #e5e5db;
+        color: #000;
+    }
+
+    [id^=tab]:checked ~ [id^=tab-content] {
+        display: block;
+    }
+
+    .tabs a {
+        display: block;
+        padding: 10px 20px;
+        color: #FFFFFF;
+        font-size: 24px;
+        font-weight: normal;
+        background: #2c3e50;
+        cursor: pointer;
+        position: relative;
+        text-decoration: none;
+    } 
+
+    .tabs a:hover {
+        background: #3498db;
+    }
+
+    .tabs a:hover ~ [id^=tab-content] {
+        display: block;
+    }
+    
+    @media only screen and (min-width: 1229px) {
+        .showcase .horizontal-images.content {
+            width: 1060px;
+        }
+    }
+    
+    @media only screen and (min-width: 1629px) {
+        .showcase .horizontal-images.content {
+            width: 700px;
+        }
+    }
+    /*Scroll Close*/
+    
+    @media only screen and (min-width: 320px) {
+        .entry-content {
+            padding: 0;
+        }
+        h1 {
+            line-height: 35px;
+        }
+        .container {
+            padding: 0 2%;
+        }
+        .guidelines {
+            margin-right: 5%;
+        }
+    }   
+    {CSSSelectorsList}
+	
+    /*CustomeScrollbar*/
+    </style>
+
+    <style type="text/css">	
+    
+    @import url("https://fast.fonts.net/lt/1.css?apiType=css&c=5182abcd-92db-4145-9d65-ec7903fc02fe&fontids=777439,777445,777448,777451,777454,777457,777460,777463,777466,777469,777478,1140233,1140236,1140239,1140242,1140245,1140248,1140251,1140254,1140260,1140263,1140266,1140269,1140272,1140275,1140278,1140281,1140284,1140287,1140290,1140293,1140299,1140302,1140305,1140308,1140311,1140314,1140317,1140320,1140323,1140326,1140329,1140332,1140335,1140338,1140341,1140344,1140347,1140350,1140353,1140356,1140359,1140362,1140365,1140368,1140371,1142038,1142071,5656272");
+    @font-face{
+        font-family:"Univers Next W01 Black";
+        src:url("Fonts/777439/fdffeb1c-176a-47ea-a494-34153ec07341.eot?#iefix");
+        src:url("Fonts/777439/fdffeb1c-176a-47ea-a494-34153ec07341.eot?#iefix") format("eot"),url("Fonts/777439/b5f227ec-a279-4258-ae68-a27ef54227e3.woff2") format("woff2"),url("Fonts/777439/e3d34dec-3139-44b1-8ded-314892605576.woff") format("woff"),url("Fonts/777439/45697ad3-712a-4d58-a6eb-913b20478c24.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Univers Next W01 Bold";
+        src:url("Fonts/777445/365d926e-03e5-4406-a883-fd0f9e462339.eot?#iefix");
+        src:url("Fonts/777445/365d926e-03e5-4406-a883-fd0f9e462339.eot?#iefix") format("eot"),url("Fonts/777445/043eef6e-81ef-483c-831c-7bfd6628554b.woff2") format("woff2"),url("Fonts/777445/7b11912a-986d-462e-b88a-4a1758eb23f1.woff") format("woff"),url("Fonts/777445/545a8d94-3389-418c-9b0a-bfc16d1f8285.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNextW01-BoldItal";
+        src:url("Fonts/777448/363c7c66-7435-4e2b-9945-a1bdfe59adc7.eot?#iefix");
+        src:url("Fonts/777448/363c7c66-7435-4e2b-9945-a1bdfe59adc7.eot?#iefix") format("eot"),url("Fonts/777448/d6e22582-9f22-4c1c-8087-8444c3c03ca2.woff2") format("woff2"),url("Fonts/777448/593b973b-bf84-480a-86ab-c7f15e05cb24.woff") format("woff"),url("Fonts/777448/e8a4f528-17fa-42d9-b486-9d41605ae975.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Univers Next W01 Heavy";
+        src:url("Fonts/777451/f1448bcf-579d-4ba3-b9b4-e027edea1939.eot?#iefix");
+        src:url("Fonts/777451/f1448bcf-579d-4ba3-b9b4-e027edea1939.eot?#iefix") format("eot"),url("Fonts/777451/f49779e6-03e4-45f9-804c-eb8f9c2a355e.woff2") format("woff2"),url("Fonts/777451/da5a3546-f1c4-4fdc-8667-b10898d0bfb3.woff") format("woff"),url("Fonts/777451/94728959-5fd1-42f0-840b-d4db4291e97a.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNextW01-HeavyIta";
+        src:url("Fonts/777454/f3398917-0bca-4a6e-8e7e-5a08fbf4f04f.eot?#iefix");
+        src:url("Fonts/777454/f3398917-0bca-4a6e-8e7e-5a08fbf4f04f.eot?#iefix") format("eot"),url("Fonts/777454/5ad16a87-147c-4115-8bab-8c389da2fe2d.woff2") format("woff2"),url("Fonts/777454/620d5a86-77f8-498a-a108-6476f650f455.woff") format("woff"),url("Fonts/777454/b59213bf-e322-434c-9b68-2ee66c439bf6.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Univers Next W01 Italic";
+        src:url("Fonts/777457/1704714d-e1a2-4c14-91b2-279e94ba5706.eot?#iefix");
+        src:url("Fonts/777457/1704714d-e1a2-4c14-91b2-279e94ba5706.eot?#iefix") format("eot"),url("Fonts/777457/c21cb708-eacd-40d7-931d-13b4b66fec3b.woff2") format("woff2"),url("Fonts/777457/00f88057-c6a6-448b-be2e-e8bc4a9c28d4.woff") format("woff"),url("Fonts/777457/4e503d23-4bcf-4a2f-b45f-846380d958c9.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Univers Next W01 Light";
+        src:url("Fonts/777460/63aa74f9-a724-4074-85c7-4167c0448227.eot?#iefix");
+        src:url("Fonts/777460/63aa74f9-a724-4074-85c7-4167c0448227.eot?#iefix") format("eot"),url("Fonts/777460/97c0f83d-39ac-412b-9d8a-d98208c0ce8d.woff2") format("woff2"),url("Fonts/777460/fc09acb4-f628-4ba0-b648-d2ca30265b20.woff") format("woff"),url("Fonts/777460/3cb4004c-2eea-45d4-a0b5-7af6f817c451.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNextW01-LightIta";
+        src:url("Fonts/777463/8c7fe4ab-375c-4be5-bba8-2c4d83ac807a.eot?#iefix");
+        src:url("Fonts/777463/8c7fe4ab-375c-4be5-bba8-2c4d83ac807a.eot?#iefix") format("eot"),url("Fonts/777463/b37595d7-d2c2-465d-81bd-f5bc289fc565.woff2") format("woff2"),url("Fonts/777463/88e0673d-3db0-4931-ae03-8a4a6eb1bbe6.woff") format("woff"),url("Fonts/777463/957860fc-f472-47cc-afcb-6305b3455894.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Univers Next W01 Medium";
+        src:url("Fonts/777466/07e1641d-6281-4461-827c-f3940fa0d811.eot?#iefix");
+        src:url("Fonts/777466/07e1641d-6281-4461-827c-f3940fa0d811.eot?#iefix") format("eot"),url("Fonts/777466/e8921ecc-af32-4c3d-9636-dd82b4225e40.woff2") format("woff2"),url("Fonts/777466/20f7bd07-85c9-4687-ab29-0b87584842ff.woff") format("woff"),url("Fonts/777466/2df6d56e-7f31-4175-88df-47d374d8bb60.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNextW01-MediumIt";
+        src:url("Fonts/777469/7af2167c-efe7-44d7-b2e1-6fdeeaa927c9.eot?#iefix");
+        src:url("Fonts/777469/7af2167c-efe7-44d7-b2e1-6fdeeaa927c9.eot?#iefix") format("eot"),url("Fonts/777469/8e26dc86-9708-4a36-89fb-a4416a5b9f5c.woff2") format("woff2"),url("Fonts/777469/c3b66848-d40c-458a-a977-7398cb9c1c82.woff") format("woff"),url("Fonts/777469/ea870cc2-efce-428c-af01-d00573ee4b0e.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNextW01-SCBlackI";
+        src:url("Fonts/777478/a3eda6d2-820b-40b7-8892-07e177ad8ded.eot?#iefix");
+        src:url("Fonts/777478/a3eda6d2-820b-40b7-8892-07e177ad8ded.eot?#iefix") format("eot"),url("Fonts/777478/be8290fb-13e7-4a53-87b7-48922e53e5bd.woff2") format("woff2"),url("Fonts/777478/ed8e8417-d241-4b54-bc23-2b937f68c6c9.woff") format("woff"),url("Fonts/777478/ad421c95-0492-4f74-aeba-ee86e4150894.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-120CdUlLt";
+        src:url("Fonts/1140233/69da81fe-33a2-4833-93c3-77d6116fd534.eot?#iefix");
+        src:url("Fonts/1140233/69da81fe-33a2-4833-93c3-77d6116fd534.eot?#iefix") format("eot"),url("Fonts/1140233/123d30d6-96db-42e3-b9d4-7501862036f9.woff2") format("woff2"),url("Fonts/1140233/73537007-b625-477e-b8f5-e51f6b90ba18.woff") format("woff"),url("Fonts/1140233/a62317f8-d500-46e1-be52-533338a1a522.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-121CdUlLtIt";
+        src:url("Fonts/1140236/85666cc8-b660-4b97-b387-f1d5e82ae533.eot?#iefix");
+        src:url("Fonts/1140236/85666cc8-b660-4b97-b387-f1d5e82ae533.eot?#iefix") format("eot"),url("Fonts/1140236/9fd96221-c955-4b5d-959a-3c4a86533cd7.woff2") format("woff2"),url("Fonts/1140236/25da88b6-6866-4135-9708-ecf9fc84735b.woff") format("woff"),url("Fonts/1140236/e973b241-b6a7-4581-b879-dc2a1510985f.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-130BUlLt";
+        src:url("Fonts/1140239/9484928c-795f-46cf-86d8-0fede76d28b2.eot?#iefix");
+        src:url("Fonts/1140239/9484928c-795f-46cf-86d8-0fede76d28b2.eot?#iefix") format("eot"),url("Fonts/1140239/a6d4a209-ad75-47c2-8569-689e2bbf2121.woff2") format("woff2"),url("Fonts/1140239/fcf79b00-2995-4702-949d-c7216550e17f.woff") format("woff"),url("Fonts/1140239/7c011985-5ab5-4e3e-b0bc-e9452da378ce.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-131BUlLtIt";
+        src:url("Fonts/1140242/c419e508-9eb7-498c-9ca0-4a3945965dcc.eot?#iefix");
+        src:url("Fonts/1140242/c419e508-9eb7-498c-9ca0-4a3945965dcc.eot?#iefix") format("eot"),url("Fonts/1140242/0a0929cf-d6df-4d1f-9d92-b00b69c4e724.woff2") format("woff2"),url("Fonts/1140242/fa16d14d-01da-43ed-a92f-e14b747f0dd7.woff") format("woff"),url("Fonts/1140242/1fae5c6d-9172-44e4-b407-3723fecab199.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-140XtdUlLt";
+        src:url("Fonts/1140245/654c2beb-8668-4806-88bd-95ac5079d94f.eot?#iefix");
+        src:url("Fonts/1140245/654c2beb-8668-4806-88bd-95ac5079d94f.eot?#iefix") format("eot"),url("Fonts/1140245/3bc04c3f-2a33-41a2-8f60-69afc4b280d8.woff2") format("woff2"),url("Fonts/1140245/466cf0a6-71e0-41dd-a55a-d2f7714c0d2c.woff") format("woff"),url("Fonts/1140245/9d8f17ac-86f3-42fd-a002-15c824f6b6f1.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-141XtdUlLtI";
+        src:url("Fonts/1140248/a78f5a8e-289b-403e-94b8-11de05346a17.eot?#iefix");
+        src:url("Fonts/1140248/a78f5a8e-289b-403e-94b8-11de05346a17.eot?#iefix") format("eot"),url("Fonts/1140248/1bd86c17-222f-4715-9e85-f9bed507e611.woff2") format("woff2"),url("Fonts/1140248/aaa0634f-4e29-47d2-9e2a-06d06e34f522.woff") format("woff"),url("Fonts/1140248/3f278b2b-6ac6-4b60-804e-a505d4028533.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-220CdThin";
+        src:url("Fonts/1140251/92898261-7c88-4d44-89e2-0c1a97f1f7b2.eot?#iefix");
+        src:url("Fonts/1140251/92898261-7c88-4d44-89e2-0c1a97f1f7b2.eot?#iefix") format("eot"),url("Fonts/1140251/420856b6-a3a9-4236-9769-59c9f593086c.woff2") format("woff2"),url("Fonts/1140251/df75700d-a811-4902-94bf-d9b23b44786d.woff") format("woff"),url("Fonts/1140251/0bc5719e-adb3-4ae5-b34a-b8618f8d7081.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-221CdThinIt";
+        src:url("Fonts/1140254/8697cdcb-1110-421e-90d7-dd3137908173.eot?#iefix");
+        src:url("Fonts/1140254/8697cdcb-1110-421e-90d7-dd3137908173.eot?#iefix") format("eot"),url("Fonts/1140254/058d61bb-17fd-481d-b0fe-0f283e19b0dd.woff2") format("woff2"),url("Fonts/1140254/3c23db90-fd46-4362-a0df-5d7c7b2a0272.woff") format("woff"),url("Fonts/1140254/193423bb-a625-4a67-a66b-3452c9e0fb2b.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-231BThinIt";
+        src:url("Fonts/1140260/f39a0cf1-cf88-41b7-b089-387cdc2924cc.eot?#iefix");
+        src:url("Fonts/1140260/f39a0cf1-cf88-41b7-b089-387cdc2924cc.eot?#iefix") format("eot"),url("Fonts/1140260/aa4aa6dc-e2ae-4e41-9819-2a0cd6d008a9.woff2") format("woff2"),url("Fonts/1140260/a0398ca1-c897-4227-8956-da638a082510.woff") format("woff"),url("Fonts/1140260/d5f64dda-54b8-4f23-a382-7a3ffb6c972d.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-240XtdThin";
+        src:url("Fonts/1140263/14b02b65-0102-4245-927a-4373ef3930fe.eot?#iefix");
+        src:url("Fonts/1140263/14b02b65-0102-4245-927a-4373ef3930fe.eot?#iefix") format("eot"),url("Fonts/1140263/89e26a8d-a832-4b24-86b8-8ad2672309ae.woff2") format("woff2"),url("Fonts/1140263/264e1540-e04b-495d-8532-fe564da878ea.woff") format("woff"),url("Fonts/1140263/0a57cc66-a44c-4a76-bd64-58050c4d0c9e.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-241XtdThinI";
+        src:url("Fonts/1140266/fab1b1da-58ac-41fb-8b23-6f99ed5f1eeb.eot?#iefix");
+        src:url("Fonts/1140266/fab1b1da-58ac-41fb-8b23-6f99ed5f1eeb.eot?#iefix") format("eot"),url("Fonts/1140266/8a06c8f4-0eb9-46dd-b844-6bef66fdde0a.woff2") format("woff2"),url("Fonts/1140266/e70c5b40-24f0-417a-bee5-d45feee1c5c5.woff") format("woff"),url("Fonts/1140266/7e3595aa-25ab-4b78-af65-94134f33a9c3.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Univers N W01_320 Cd Lt";
+        src:url("Fonts/1140269/53d3740d-eae3-4d70-b26e-12f3270930b2.eot?#iefix");
+        src:url("Fonts/1140269/53d3740d-eae3-4d70-b26e-12f3270930b2.eot?#iefix") format("eot"),url("Fonts/1140269/c4b1991c-283c-4183-9c41-393c84fec8a9.woff2") format("woff2"),url("Fonts/1140269/ea5d0a5d-6935-48e9-8e1a-40d788b29fc3.woff") format("woff"),url("Fonts/1140269/207ef27e-79d8-4ce2-8d12-99d92d27070c.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-321CdLtIt";
+        src:url("Fonts/1140272/fcc7a440-0cbd-4283-8971-6d74a6793d58.eot?#iefix");
+        src:url("Fonts/1140272/fcc7a440-0cbd-4283-8971-6d74a6793d58.eot?#iefix") format("eot"),url("Fonts/1140272/93af65da-af76-4acd-bbfe-32e00c683fe6.woff2") format("woff2"),url("Fonts/1140272/6298f5a0-004d-4507-b036-bb1e46781fda.woff") format("woff"),url("Fonts/1140272/06cfd5cd-94b9-4a67-b1c6-d1072e99ac25.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-620CdBold";
+        src:url("Fonts/1140275/9f0c8050-10a3-457c-ad2a-2203476a85ae.eot?#iefix");
+        src:url("Fonts/1140275/9f0c8050-10a3-457c-ad2a-2203476a85ae.eot?#iefix") format("eot"),url("Fonts/1140275/9bce1f08-7481-4271-ba4b-32219560eeec.woff2") format("woff2"),url("Fonts/1140275/387a924a-6aec-4120-918b-f34231ba2407.woff") format("woff"),url("Fonts/1140275/a45cb5fa-3034-4415-a80c-0ace7bd6a667.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-621CdBoldIt";
+        src:url("Fonts/1140278/7b7f4933-e37a-4b51-b298-c0de5947da0f.eot?#iefix");
+        src:url("Fonts/1140278/7b7f4933-e37a-4b51-b298-c0de5947da0f.eot?#iefix") format("eot"),url("Fonts/1140278/ddcd93e7-ac81-4658-8e15-0f0bcf09fd4f.woff2") format("woff2"),url("Fonts/1140278/0c32b1c9-91f4-46ab-b7cf-692a3368bd4a.woff") format("woff"),url("Fonts/1140278/c9ea03be-bba3-40d9-a7b2-9586753b233c.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-340XtdLt";
+        src:url("Fonts/1140281/65ecf649-ed94-40a6-b2d9-d23f733ecd56.eot?#iefix");
+        src:url("Fonts/1140281/65ecf649-ed94-40a6-b2d9-d23f733ecd56.eot?#iefix") format("eot"),url("Fonts/1140281/0fda6efa-0be7-48d3-85b0-ffa4fd1f0c57.woff2") format("woff2"),url("Fonts/1140281/d4155603-e462-40ed-82ed-a278e6892bbc.woff") format("woff"),url("Fonts/1140281/6c65de8f-063a-4946-a91a-1184107fe4d9.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-341XtdLtIt";
+        src:url("Fonts/1140284/52938782-879b-40c8-ae3a-fe7a638c81d3.eot?#iefix");
+        src:url("Fonts/1140284/52938782-879b-40c8-ae3a-fe7a638c81d3.eot?#iefix") format("eot"),url("Fonts/1140284/da20198e-15e6-48ff-9c6f-84869fffd7a6.woff2") format("woff2"),url("Fonts/1140284/25eefb50-8192-44e0-82d0-b6443a48be6b.woff") format("woff"),url("Fonts/1140284/4b6afdf5-9cc3-4d15-adc0-e8ef0d650e1e.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-640XtdBold";
+        src:url("Fonts/1140287/03e1d98a-00d2-40ac-a581-1246128de365.eot?#iefix");
+        src:url("Fonts/1140287/03e1d98a-00d2-40ac-a581-1246128de365.eot?#iefix") format("eot"),url("Fonts/1140287/635abde4-5cf0-490b-bd6e-b4f7eaf1d67e.woff2") format("woff2"),url("Fonts/1140287/49ce0972-51be-4523-a77c-8a64bf15d010.woff") format("woff"),url("Fonts/1140287/71364730-1cce-448d-b8b3-5f7217f9322b.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-641XtdBoldI";
+        src:url("Fonts/1140290/a6db4f10-c5ff-481a-86b5-1c0fd1673ff3.eot?#iefix");
+        src:url("Fonts/1140290/a6db4f10-c5ff-481a-86b5-1c0fd1673ff3.eot?#iefix") format("eot"),url("Fonts/1140290/188e5b71-91c0-4d1f-886b-d05aebf244c9.woff2") format("woff2"),url("Fonts/1140290/0b55e3bc-ed07-45b9-916a-2d01f8279192.woff") format("woff"),url("Fonts/1140290/9fe4bbb1-10e6-445b-820f-c9a4c5edf543.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-420CdRegula";
+        src:url("Fonts/1140293/fc0c93c0-ce96-4620-81d0-fc10038f9e0d.eot?#iefix");
+        src:url("Fonts/1140293/fc0c93c0-ce96-4620-81d0-fc10038f9e0d.eot?#iefix") format("eot"),url("Fonts/1140293/87746814-eb31-476e-a2b3-14954cbe7a09.woff2") format("woff2"),url("Fonts/1140293/6b207f04-a670-4f46-b749-47a7ae9612b8.woff") format("woff"),url("Fonts/1140293/d9fcc947-4ea2-4bcc-bbc2-6c7e6064ab74.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-720CdHeavy";
+        src:url("Fonts/1140299/e6b59fc8-2d46-4dc2-91fa-79531f80469b.eot?#iefix");
+        src:url("Fonts/1140299/e6b59fc8-2d46-4dc2-91fa-79531f80469b.eot?#iefix") format("eot"),url("Fonts/1140299/1e770e0a-1a0f-45d4-b4c6-5c323c324fb6.woff2") format("woff2"),url("Fonts/1140299/6fbcb29b-6cbb-4cf5-b283-34a7576afbd0.woff") format("woff"),url("Fonts/1140299/9504ab96-7cdc-4754-9df3-2d4026d860ac.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-721CdHeavyI";
+        src:url("Fonts/1140302/7d1b85b6-0214-40f3-a553-490d635566a5.eot?#iefix");
+        src:url("Fonts/1140302/7d1b85b6-0214-40f3-a553-490d635566a5.eot?#iefix") format("eot"),url("Fonts/1140302/c6aa9459-3176-445f-9f54-78280d3e4926.woff2") format("woff2"),url("Fonts/1140302/db713297-25df-4737-a1a2-ab7ce63e681d.woff") format("woff"),url("Fonts/1140302/64d570ba-b281-4726-a3f3-59c2a2cb53c7.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-440XtdRegul";
+        src:url("Fonts/1140305/fc2127ab-7b22-4278-9d08-5f0c04912129.eot?#iefix");
+        src:url("Fonts/1140305/fc2127ab-7b22-4278-9d08-5f0c04912129.eot?#iefix") format("eot"),url("Fonts/1140305/3eb2ece9-4776-48c0-80e0-df5033ceaa01.woff2") format("woff2"),url("Fonts/1140305/d1cf2dc8-7a45-42ea-9295-41e6d4128ab0.woff") format("woff"),url("Fonts/1140305/437ed8f1-4f84-424f-8c23-5574f3857392.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-441XtdIt";
+        src:url("Fonts/1140308/e7f0b17c-9947-4914-80de-90137a23234f.eot?#iefix");
+        src:url("Fonts/1140308/e7f0b17c-9947-4914-80de-90137a23234f.eot?#iefix") format("eot"),url("Fonts/1140308/5bbdb232-1a5c-4c2d-866a-9456396075e1.woff2") format("woff2"),url("Fonts/1140308/3d22e848-06a8-4790-bb8a-373b1b8fa588.woff") format("woff"),url("Fonts/1140308/6d959570-618e-4aac-a50b-4dfe37d0ff1c.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-740XtdHeavy";
+        src:url("Fonts/1140311/08b42a26-859e-4e88-a2cc-9d3b8e2e291c.eot?#iefix");
+        src:url("Fonts/1140311/08b42a26-859e-4e88-a2cc-9d3b8e2e291c.eot?#iefix") format("eot"),url("Fonts/1140311/30f33d69-9ddc-44a0-8f23-5905f6485bad.woff2") format("woff2"),url("Fonts/1140311/87a11da0-5c1e-4af5-96bb-6460ff0f7e0c.woff") format("woff"),url("Fonts/1140311/d82080b3-fbd5-44d9-acdc-9c42f1d89158.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-741XtdHeavy";
+        src:url("Fonts/1140314/497edcce-86e2-4b09-b4b9-d940bc9f43a4.eot?#iefix");
+        src:url("Fonts/1140314/497edcce-86e2-4b09-b4b9-d940bc9f43a4.eot?#iefix") format("eot"),url("Fonts/1140314/33a08d9a-f5e8-4faf-b9ef-9466f2d63c9e.woff2") format("woff2"),url("Fonts/1140314/18f66746-bcdd-4407-9323-0dfe9396b69d.woff") format("woff"),url("Fonts/1140314/f10ef947-8bde-477d-a5c2-72c9bd1c4b6a.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-520CdMedium";
+        src:url("Fonts/1140317/9f1b7e50-8980-4084-aa21-1c4f2f214923.eot?#iefix");
+        src:url("Fonts/1140317/9f1b7e50-8980-4084-aa21-1c4f2f214923.eot?#iefix") format("eot"),url("Fonts/1140317/518ad8ee-7986-4de6-bc5d-0bfa09fc0d9d.woff2") format("woff2"),url("Fonts/1140317/76766dbf-be05-4eca-8a2f-27d2bcec3ba8.woff") format("woff"),url("Fonts/1140317/4f9a2cd5-fa1e-4459-bfe8-dd1493b9ed98.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-521CdMedium";
+        src:url("Fonts/1140320/ca03457f-b28c-4d69-931f-f21207d4356d.eot?#iefix");
+        src:url("Fonts/1140320/ca03457f-b28c-4d69-931f-f21207d4356d.eot?#iefix") format("eot"),url("Fonts/1140320/40b64fdd-2f8e-406f-b0c6-a41ed749b404.woff2") format("woff2"),url("Fonts/1140320/1a533845-f6be-4422-8df1-310aa942bc00.woff") format("woff"),url("Fonts/1140320/12105c90-0823-4f06-9fc0-e9128e57e80d.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-820CdBlk";
+        src:url("Fonts/1140323/d059479e-7562-4f14-a40d-f128fbd37490.eot?#iefix");
+        src:url("Fonts/1140323/d059479e-7562-4f14-a40d-f128fbd37490.eot?#iefix") format("eot"),url("Fonts/1140323/a49e4fec-2800-42e3-a7bd-5f10ce59ac94.woff2") format("woff2"),url("Fonts/1140323/79239a95-af1c-414a-b1bb-a6b6ccc86499.woff") format("woff"),url("Fonts/1140323/f2cbcbfd-3afe-4b40-b89e-543ea449c662.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-821CdBlkIt";
+        src:url("Fonts/1140326/757fc323-9da1-46d1-ab19-5790f746dd1a.eot?#iefix");
+        src:url("Fonts/1140326/757fc323-9da1-46d1-ab19-5790f746dd1a.eot?#iefix") format("eot"),url("Fonts/1140326/5b2858f4-a718-431e-8539-bb7643343103.woff2") format("woff2"),url("Fonts/1140326/f91826d3-e401-474b-8d10-011c4e9f82fe.woff") format("woff"),url("Fonts/1140326/18048367-1cb9-4f6e-8606-88ad4564dc47.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-540XtdMediu";
+        src:url("Fonts/1140329/f2ee038f-ca68-4155-8ede-356f767dc2f6.eot?#iefix");
+        src:url("Fonts/1140329/f2ee038f-ca68-4155-8ede-356f767dc2f6.eot?#iefix") format("eot"),url("Fonts/1140329/d24701a8-9331-44a6-8583-79bf2b256c33.woff2") format("woff2"),url("Fonts/1140329/b2c8a350-a3c4-4325-b346-f8aa041a9ad7.woff") format("woff"),url("Fonts/1140329/78e1e5eb-65f2-4bce-98c8-2a087f79ba85.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-541XtdMediu";
+        src:url("Fonts/1140332/98ecf0b7-5fa5-43c5-a46c-57732c5f3ada.eot?#iefix");
+        src:url("Fonts/1140332/98ecf0b7-5fa5-43c5-a46c-57732c5f3ada.eot?#iefix") format("eot"),url("Fonts/1140332/a7a20087-c13e-4bb4-97ba-67344d1aade3.woff2") format("woff2"),url("Fonts/1140332/0c038ea2-d3a9-41e8-83dc-2c04e452200c.woff") format("woff"),url("Fonts/1140332/b9d8f87e-2416-47bd-a96b-2264adf0b404.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-840XtdBlk";
+        src:url("Fonts/1140335/16566f52-0adb-4157-bd5c-0b5abf6fc052.eot?#iefix");
+        src:url("Fonts/1140335/16566f52-0adb-4157-bd5c-0b5abf6fc052.eot?#iefix") format("eot"),url("Fonts/1140335/ac096361-89d1-4c96-bd88-715ed9525db7.woff2") format("woff2"),url("Fonts/1140335/4d2b10c0-f140-4457-b5e0-d43fa34ca5b3.woff") format("woff"),url("Fonts/1140335/3f15a3f6-306a-4acb-b920-a20cd972a01b.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-841XtdBlkIt";
+        src:url("Fonts/1140338/30d2f091-8626-4d8d-b744-fe3aeb85c9c9.eot?#iefix");
+        src:url("Fonts/1140338/30d2f091-8626-4d8d-b744-fe3aeb85c9c9.eot?#iefix") format("eot"),url("Fonts/1140338/60be0673-6dd8-4908-8d50-0334f4f09ebe.woff2") format("woff2"),url("Fonts/1140338/bf79fcc8-f2b9-4b10-a231-bba68ea3285b.woff") format("woff"),url("Fonts/1140338/1709181c-4999-48f0-bcde-6d15e6e7153d.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-920CdXBlk";
+        src:url("Fonts/1140341/9eeb33bb-e036-432e-bba5-9496a8971e43.eot?#iefix");
+        src:url("Fonts/1140341/9eeb33bb-e036-432e-bba5-9496a8971e43.eot?#iefix") format("eot"),url("Fonts/1140341/9762031b-d12a-4c94-b540-b320a7e8f138.woff2") format("woff2"),url("Fonts/1140341/f5a1e285-844d-4205-b59b-4b460f02cb3f.woff") format("woff"),url("Fonts/1140341/10a5438e-959e-4980-8172-9d7dc09a7036.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-921CdXBlkIt";
+        src:url("Fonts/1140344/eb78149a-1ebe-48ea-9d07-c527bdec8315.eot?#iefix");
+        src:url("Fonts/1140344/eb78149a-1ebe-48ea-9d07-c527bdec8315.eot?#iefix") format("eot"),url("Fonts/1140344/0aa0e637-d946-4fe7-b778-b5b84eac8ebe.woff2") format("woff2"),url("Fonts/1140344/8d4f77f7-1e6c-4e3a-82e4-52e05e727961.woff") format("woff"),url("Fonts/1140344/cb473a7c-92db-42ca-a3c6-9b2e3240cb6e.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-930BXBlk";
+        src:url("Fonts/1140347/88a16ccb-f4b2-4efb-b456-c157c8690155.eot?#iefix");
+        src:url("Fonts/1140347/88a16ccb-f4b2-4efb-b456-c157c8690155.eot?#iefix") format("eot"),url("Fonts/1140347/bac1b39b-eefb-416d-bbe5-a78d378cb66d.woff2") format("woff2"),url("Fonts/1140347/67a1ce67-66ad-450a-a3d6-98e15f534199.woff") format("woff"),url("Fonts/1140347/0f00b780-4ce0-41e4-8c17-684ffcb96e9d.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-931BXBlkIt";
+        src:url("Fonts/1140350/b8822d99-a40f-4b43-9b24-3e60782324a4.eot?#iefix");
+        src:url("Fonts/1140350/b8822d99-a40f-4b43-9b24-3e60782324a4.eot?#iefix") format("eot"),url("Fonts/1140350/a81cdbc0-405e-427a-8b24-3a812527a403.woff2") format("woff2"),url("Fonts/1140350/2404663e-fc66-42e4-90b8-37b4cc61c2e8.woff") format("woff"),url("Fonts/1140350/ea0ccd4b-d230-42dd-98cf-ad3c09f2c77e.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-940XtdXBlk";
+        src:url("Fonts/1140353/7c40a1f7-05cf-44f2-9c35-1dd84aea2c3b.eot?#iefix");
+        src:url("Fonts/1140353/7c40a1f7-05cf-44f2-9c35-1dd84aea2c3b.eot?#iefix") format("eot"),url("Fonts/1140353/c085d315-4c1b-46af-a33a-ac4f03123e99.woff2") format("woff2"),url("Fonts/1140353/5e2e190e-693c-4f76-85bc-e66bb07831f5.woff") format("woff"),url("Fonts/1140353/35508b96-e021-4ba5-907c-793458720fe7.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-941XtdXBlkI";
+        src:url("Fonts/1140356/6f11b043-13b8-4f13-a381-0b6e4cf615ba.eot?#iefix");
+        src:url("Fonts/1140356/6f11b043-13b8-4f13-a381-0b6e4cf615ba.eot?#iefix") format("eot"),url("Fonts/1140356/51481dc4-5973-416e-af52-5e452fb7d3bd.woff2") format("woff2"),url("Fonts/1140356/3eff3a9a-a3d6-4ded-a647-33598251afcc.woff") format("woff"),url("Fonts/1140356/0914f85f-e411-4c9f-b128-b6ec78a363a8.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-110CmpUlLt";
+        src:url("Fonts/1140359/58f2fa59-2624-450d-8976-43a35e2f207c.eot?#iefix");
+        src:url("Fonts/1140359/58f2fa59-2624-450d-8976-43a35e2f207c.eot?#iefix") format("eot"),url("Fonts/1140359/50ca5550-0856-4ef4-aac1-0c07a0e23dae.woff2") format("woff2"),url("Fonts/1140359/b14d03eb-ab26-4118-8120-6e7303e2b36d.woff") format("woff"),url("Fonts/1140359/e6bb2bd7-3d14-447a-867f-af30cc9b7d45.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-210CmpThin";
+        src:url("Fonts/1140362/aa8b96b5-1ee6-44c4-a6bc-c6b994104271.eot?#iefix");
+        src:url("Fonts/1140362/aa8b96b5-1ee6-44c4-a6bc-c6b994104271.eot?#iefix") format("eot"),url("Fonts/1140362/8b55bee2-64cf-4a50-9c03-3a42dcda84e2.woff2") format("woff2"),url("Fonts/1140362/dcf27618-5331-4a1e-99b0-795828f8f3b0.woff") format("woff"),url("Fonts/1140362/a332c4ed-2a9e-4bfb-9a24-70c8ce72c017.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-310CmpLt";
+        src:url("Fonts/1140365/bb5b2336-ad56-4129-a7cb-796190e0f6f7.eot?#iefix");
+        src:url("Fonts/1140365/bb5b2336-ad56-4129-a7cb-796190e0f6f7.eot?#iefix") format("eot"),url("Fonts/1140365/de8f1c09-1c7e-47fd-82f2-1eb345492593.woff2") format("woff2"),url("Fonts/1140365/bb2eceb2-8efc-4d46-a2be-37d5af01f1ad.woff") format("woff"),url("Fonts/1140365/79a7b7bf-f38a-4fde-b2e8-8f14459b0390.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Univers N W01_410 Cmp";
+        src:url("Fonts/1140368/e87a56f0-8596-4fbf-ae43-aa842ab2e7a2.eot?#iefix");
+        src:url("Fonts/1140368/e87a56f0-8596-4fbf-ae43-aa842ab2e7a2.eot?#iefix") format("eot"),url("Fonts/1140368/60657622-c915-42d4-b120-461cb53a15cb.woff2") format("woff2"),url("Fonts/1140368/7fafa073-511f-47bf-9b94-5a859a735e47.woff") format("woff"),url("Fonts/1140368/1f1a9974-47c1-4439-94fd-18d29c78510d.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-510CmpMediu";
+        src:url("Fonts/1140371/7d793037-5b12-4e8f-8233-8613a9f01749.eot?#iefix");
+        src:url("Fonts/1140371/7d793037-5b12-4e8f-8233-8613a9f01749.eot?#iefix") format("eot"),url("Fonts/1140371/098d6184-6f69-4e95-abd0-76a0312a9b6f.woff2") format("woff2"),url("Fonts/1140371/20ac48ab-f7dd-4ea0-aae4-45190f596837.woff") format("woff"),url("Fonts/1140371/d752df6d-77e4-42d0-99ae-85b9a67dd573.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01SC-230BThin";
+        src:url("Fonts/1142038/dae1c85d-e749-4604-85ee-270803955dd6.eot?#iefix");
+        src:url("Fonts/1142038/dae1c85d-e749-4604-85ee-270803955dd6.eot?#iefix") format("eot"),url("Fonts/1142038/c4b2f41a-4b5b-4c7e-a6ff-318db364d043.woff2") format("woff2"),url("Fonts/1142038/aac5adab-ee0b-4d76-b0ab-4512139de1a2.woff") format("woff"),url("Fonts/1142038/c11931a4-fc16-48ff-a302-2d8761e9f4d1.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01SC-421CdIt";
+        src:url("Fonts/1142071/282d6307-9edd-43bb-b593-66ae70402feb.eot?#iefix");
+        src:url("Fonts/1142071/282d6307-9edd-43bb-b593-66ae70402feb.eot?#iefix") format("eot"),url("Fonts/1142071/4c9be9a7-10dd-42b3-8596-06ab28e877d5.woff2") format("woff2"),url("Fonts/1142071/143ddbd6-2ac0-4820-9a54-356c419ae67c.woff") format("woff"),url("Fonts/1142071/c2c2043e-1013-46dd-a635-b61ea34b94d5.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Univers Next W01 Regular";
+        src:url("Fonts/5656272/7c5665cc-627d-480c-a01d-5cef72cf43a4.eot?#iefix");
+        src:url("Fonts/5656272/7c5665cc-627d-480c-a01d-5cef72cf43a4.eot?#iefix") format("eot"),url("Fonts/5656272/74e1830b-1468-4905-a73d-e2b6d1e690d6.woff2") format("woff2"),url("Fonts/5656272/e43bae6d-8805-4214-8f2d-0489865368aa.woff") format("woff"),url("Fonts/5656272/2bceebc9-7164-4633-b492-a89cb32368b1.ttf") format("truetype");
+    }
+
+	</style>
+
+
+
+</head>
+
+<body>
+    <header>
+        <a href="http://www.linotype.com"><img alt="Linotype" height="56" width="150" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9Ikxpbm90eXBlTG9nbyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSIxMzhweCIgaGVpZ2h0PSIzNi4xOTVweCIgdmlld0JveD0iMCAwIDEzOCAzNi4xOTUiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxnPg0KCQkJPHBhdGggZD0iTTIyLjYwNCwxNC40MTJoNS4wODN2Mi41MzNoLTguNDk5VjQuNDA2aDMuNDE1VjE0LjQxMnoiLz4NCgkJCTxwYXRoIGQ9Ik0zMi4zNTYsNi4yMzhoLTMuMjUyVjMuODMyaDMuMjUyVjYuMjM4eiBNMzIuMzU2LDE2Ljk0NGgtMy4yNTJWNy42MDRoMy4yNTJWMTYuOTQ0eiIvPg0KCQkJPHBhdGggZD0iTTM3LjU0Niw5LjIyYzAuNjgzLTEuMDQyLDEuOTU4LTEuODUsMy4yODctMS44NWMyLjI4MiwwLDMuNjExLDEuNDAxLDMuNjExLDMuOTY5djUuNjA1SDQxLjIxdi00LjQzNg0KCQkJCWMwLTEuNzI0LTAuMzQtMi41NTMtMS40OS0yLjU1M2MtMC44NDYsMC0xLjMzMSwwLjM5NS0xLjYxNywwLjk1M2MtMC4yODksMC41NTgtMC4zNTksMS4zMTItMC4zNTksMi4wMjl2NC4wMDZoLTMuMjUyVjEwLjY0DQoJCQkJYzAtMC43OS0wLjAxOC0xLjc3OC0wLjA4OS0zLjAzNmgzLjAzNmMwLjAzNSwwLjM5NSwwLjA3MiwxLjEzMSwwLjA3MiwxLjYxN0gzNy41NDZ6Ii8+DQoJCQk8cGF0aCBkPSJNNTYuODE4LDEyLjI5MmMwLDIuOTgzLTIuMTM3LDQuODg2LTUuNDA2LDQuODg2Yy0zLjI1MywwLTUuMzg5LTEuOTIxLTUuMzg5LTQuODVjMC0zLjA3MywyLjA2Ni00Ljk1OCw1LjQ0My00Ljk1OA0KCQkJCUM1NC43MTYsNy4zNyw1Ni44MTgsOS4yOTIsNTYuODE4LDEyLjI5MnogTTQ5LjM0NCwxMi4yMzljMCwxLjYzNCwwLjg2NCwyLjcyOSwyLjA4NSwyLjcyOWMxLjIyMSwwLDIuMDY2LTEuMDc2LDIuMDY2LTIuNjU4DQoJCQkJYzAtMS42MzUtMC44NDUtMi43My0yLjA4NC0yLjczQzUwLjIyNiw5LjU4LDQ5LjM0NCwxMC43MSw0OS4zNDQsMTIuMjM5eiIvPg0KCQk8L2c+DQoJCTxnPg0KCQkJPHBhdGggZD0iTTU4LjQ4NSw3LjRoMy42OTJ2LTQuMTlsNi4wNzEtMS45ODdWNy40aDQuNDM3djQuMzY1aC00LjQzN3Y3LjI0MmMwLDEuNDIsMC4zNTUsMi44MDYsMi40ODQsMi44MDYNCgkJCQljMC42NzUsMCwxLjM4Ni0wLjA3MSwxLjk5LTAuMjEzbDAuMjE0LDQuMTUyYy0xLjI0NCwwLjI1LTIuODA2LDAuMzkxLTMuOTA2LDAuMzkxYy00LjkzNiwwLTcuMTM2LTIuMDkzLTcuMTM2LTYuNjcydi03LjcwNQ0KCQkJCWgtMy40MDhWNy40eiIvPg0KCQk8L2c+DQoJCTxnPg0KCQkJPHBhdGggZD0iTTEwMi45ODgsOC44NzhjMS43NzQtMi4zNTMsMy40NzMtMy40MzksNi40MDYtMy40MzljNC45MjQsMCw4LjExLDMuODAyLDguMTEsOS43MDNjMCw1Ljk3MS0zLjQwMywxMC4wNjItOC40MzcsMTAuMDYyDQoJCQkJYy0yLjcxNCwwLTQuNjY3LTEuMDEyLTUuODYyLTMuMDM5aC0wLjA3NGMwLjA3NCwwLjcyNSwwLjEwOSwzLjI5MywwLjEwOSw0LjM3OXY1Ljg2NGgtNi41ODlWMTEuNzM4DQoJCQkJYzAtMS45NTQtMC4wMzUtNC4yNzEtMC4xODEtNS44MjdoNi4yOThjMC4wNzIsMC43NjEsMC4xNDYsMi4wMjYsMC4xNDYsMi45NjhIMTAyLjk4OHogTTEwMi45ODgsMTUuMjg2DQoJCQkJYzAsMy4wNzcsMS41NTYsNS4wMzMsNC4wMTcsNS4wMzNjMi4zODksMCwzLjgzOS0xLjkyLDMuODM5LTUuMjEzYzAtMi45NjgtMS40ODUtNC44MTQtMy44MDMtNC44MTQNCgkJCQlDMTA0LjYxNSwxMC4yOTEsMTAyLjk4OCwxMi4zMTgsMTAyLjk4OCwxNS4yODZ6Ii8+DQoJCTwvZz4NCgkJPGc+DQoJCQk8cGF0aCBkPSJNMTM3LjczMyw1LjczOHY0LjgwNWgtMTAuOTE3djUuOTk2aDEwLjE0N3Y0Ljc2NmgtMTAuMTQ3djYuNDJIMTM4djQuODQyaC0xNy40MTFWNS43MzhIMTM3LjczM3oiLz4NCgkJPC9nPg0KCTwvZz4NCgk8cG9seWdvbiBmaWxsPSIjRTIwMDFBIiBwb2ludHM9IjAsMTUuNzQ5IDAsMzYuMTk1IDIwLjQwMiwzNi4xOTUgMjAuNDAyLDI1Ljk3MyAxMC4yMjMsMjUuOTczIDEwLjIyMywxNS43NDkgCSIvPg0KCTxnPg0KCQk8Zz4NCgkJCTxwYXRoIGQ9Ik04MC4wMiwwbDIuNjI4LDUuMjk0YzAuODY0LDEuNzY0LDEuOTE2LDQuMTMxLDIuNDgsNS41MmgwLjA3NGMwLjU2My0xLjM1MiwxLjYxNC0zLjc1NSwyLjQ0LTUuNTJMOTAuMTIsMGg3LjczNQ0KCQkJCUw4OC40NywxNi42MzR2OS41NzVoLTcuMTM1di05Ljc2NEw3MS43NTgsMEg4MC4wMnoiLz4NCgkJPC9nPg0KCTwvZz4NCjwvZz4NCjwvc3ZnPg0K"></a>
+    </header>
+    <div class="container">
+        <div class="entry-content">
+            <h1 class="light-font">Web Font Kit &amp; Implementation Guide</h1>
+            <p align="alignCenter">Thank you for buying webfonts on Linotype.com. </p>
+            <p align="alignCenter">You find below an overview of the fonts contained in this kit. To use these webfonts on your website please follow the implementation guidelines below.</p>
+        </div>
+        <div class="font-contained">
+            <h2 class="heavy-font">Web Fonts contained in this kit</h2>
+            <div class="accordion">
+                <div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'Univers Next W01 Black';">Univers® Next W01 830 Basic Black </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'Univers Next W01 Bold';">Univers® Next W01 630 Basic Bold </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNextW01-BoldItal';">Univers® Next W01 631 Basic Bold Italic </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'Univers Next W01 Heavy';">Univers® Next W01 730 Basic Heavy </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNextW01-HeavyIta';">Univers® Next W01 731 Heavy Italic </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'Univers Next W01 Italic';">Univers® Next W01 431 Basic Italic </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'Univers Next W01 Light';">Univers® Next W01 330 Basic Light </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNextW01-LightIta';">Univers® Next W01 331 Basic Light Italic </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'Univers Next W01 Medium';">Univers® Next W01 530 Basic Medium </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNextW01-MediumIt';">Univers® Next W01 531 Basic Medium Italic </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNextW01-SCBlackI';">Univers® Next W01 831 Basic Black Italic SC </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-120CdUlLt';">Univers® Next W01 120 Condensed Ultra Light </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-121CdUlLtIt';">Univers® Next W01 121 Condensed Ultra Light Italic </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-130BUlLt';">Univers® Next W01 130 Basic Ultra Light </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-131BUlLtIt';">Univers® Next W01 131 Basic Ultra Light Italic </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-140XtdUlLt';">Univers® Next W01 140 Extended Ultra Light </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-141XtdUlLtI';">Univers® Next W01 141 Extended Ultra Light Italic </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-220CdThin';">Univers® Next W01 220 Condensed Thin </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-221CdThinIt';">Univers® Next W01 221 Condensed Thin Italic </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-231BThinIt';">Univers® Next W01 231 Basic Thin Italic </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-240XtdThin';">Univers® Next W01 240 Extended Thin </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-241XtdThinI';">Univers® Next W01 241 Extended Thin Italic </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'Univers N W01_320 Cd Lt';">Univers® Next W01 320 Condensed Light </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-321CdLtIt';">Univers® Next W01 321 Condensed Light Italic </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-620CdBold';">Univers® Next W01 620 Condensed Bold </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-621CdBoldIt';">Univers® Next W01 621 Condensed Bold Italic </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-340XtdLt';">Univers® Next W01 340 Extended Light </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-341XtdLtIt';">Univers® Next W01 341 Extended Light Italic </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-640XtdBold';">Univers® Next W01 640 Extended Bold </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-641XtdBoldI';">Univers® Next W01 641 Extended Bold Italic </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-420CdRegula';">Univers® Next W01 420 Condensed Regular </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-720CdHeavy';">Univers® Next W01 720 Condensed Heavy </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-721CdHeavyI';">Univers® Next W01 721 Condensed Heavy Italic </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-440XtdRegul';">Univers® Next W01 440 Extended Regular </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-441XtdIt';">Univers® Next W01 441 Extended Regular Italic </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-740XtdHeavy';">Univers® Next W01 740 Extended Heavy </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-741XtdHeavy';">Univers® Next W01 741 Extended Heavy Italic </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-520CdMedium';">Univers® Next W01 520 Condensed Medium </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-521CdMedium';">Univers® Next W01 521 Condensed Medium Italic </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-820CdBlk';">Univers® Next W01 820 Condensed Black </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-821CdBlkIt';">Univers® Next W01 821 Condensed Black Italic </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-540XtdMediu';">Univers® Next W01 540 Extended Medium </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-541XtdMediu';">Univers® Next W01 541 Extended Medium Italic </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-840XtdBlk';">Univers® Next W01 840 Extended Black </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-841XtdBlkIt';">Univers® Next W01 841 Extended Black Italic </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-920CdXBlk';">Univers® Next W01 920 Condensed Extra Black </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-921CdXBlkIt';">Univers® Next W01 921 Condensed Extra Black Italic </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-930BXBlk';">Univers® Next W01 930 Basic Extra Black </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-931BXBlkIt';">Univers® Next W01 931 Basic Extra Black Italic </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-940XtdXBlk';">Univers® Next W01 940 Extended Extra Black </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-941XtdXBlkI';">Univers® Next W01 941 Extended Extra Black Italic </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-110CmpUlLt';">Univers® Next W01 110 Compressed Ultra Light </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-210CmpThin';">Univers® Next W01 210 Compressed Thin </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-310CmpLt';">Univers® Next W01 310 Compressed Light </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'Univers N W01_410 Cmp';">Univers® Next W01 410 Compressed </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01-510CmpMediu';">Univers® Next W01 510 Compressed Medium </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01SC-230BThin';">Univers® Next W01 230 Basic Thin SC </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'UniversNW01SC-421CdIt';">Univers® Next W01 421 Condensed Italic SC </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+<div class="accordionButton"><span class="plusMinus">+</span><span style="font-family:'Univers Next W01 Regular';">Univers® Next W01 430 Basic Regular </span><span class="font-label"> Linotype</span></div><div class="accordionContent">
+	<ul>
+		<li>Open the End User License Agreements for this font: <span><a href="Eulas/Webfonts%20Pay-As-You-Go%20End%20User%20License%20Agreement.pdf">Open EULA PDF</a></span></li>
+	</ul>
+</div>
+
+            </div>
+        </div>
+        <div class="guidelines">
+            <h2 class="heavy-font">CSS Implementation Guidelines</h2>
+            <p>You need one file for each font style you want to use in your site. Use the CSS code example below to reference your webfonts. Make sure that the font file URL is appropriate with the path on your server</p>
+            <p>The value of the font-family property is used internally in your style definitions, so you could set it to any name you like. Make sure to keep it shorter than 32 characters though, or Internet Explorer will not display your webfonts</p>
+            <p>Font file names have been obfuscated to protect the font software. You can identify font format based on file ending:</p>
+            <ul>
+                <li><span>ttf</span> - TrueType</li>
+                <li><span>eot</span> - Embedded OpenType</li>
+                <li><span>woff</span> - Web Open Font Format</li>
+                <li><b>woff2 -</b> Web Open Font Format version 2 </li>
+            </ul>
+            <p class="uc"><b>Copy and paste the following code into the head section of the page</b></p>
+            <ul class="tabs" name="tabbox">
+                <li>
+                  <!--[if lt IE 9]>
+                    <a href="#tabbox" tabindex="1">tab 1</a>
+                  <![endif]-->
+                  <![if (!IE)|(gte IE 9)]>
+                    <input type="radio" checked name="tabs" id="tab1">
+                    <label for="tab1">CSS-only</label>
+                  <![endif]>
+                    <div id="tab-content1" class="tab-content">
+            <div id="examples" class="textarea-example">
+               <div id="content-1" class="content">
+                    <p>The CSS-only implementation does not require Javascript but can slightly delay loading of other page elements
+					</p>
+
+                     <div class="code-wrapper" contenteditable="true">
+					<code>
+&#x3C;style type=&#x22;text/css&#x22;&#x3E;
+    @import url("https://fast.fonts.net/lt/1.css?apiType=css&c=5182abcd-92db-4145-9d65-ec7903fc02fe&fontids=777439,777445,777448,777451,777454,777457,777460,777463,777466,777469,777478,1140233,1140236,1140239,1140242,1140245,1140248,1140251,1140254,1140260,1140263,1140266,1140269,1140272,1140275,1140278,1140281,1140284,1140287,1140290,1140293,1140299,1140302,1140305,1140308,1140311,1140314,1140317,1140320,1140323,1140326,1140329,1140332,1140335,1140338,1140341,1140344,1140347,1140350,1140353,1140356,1140359,1140362,1140365,1140368,1140371,1142038,1142071,5656272");
+    @font-face{
+        font-family:"Univers Next W01 Black";
+        src:url("Fonts/777439/fdffeb1c-176a-47ea-a494-34153ec07341.eot?#iefix");
+        src:url("Fonts/777439/fdffeb1c-176a-47ea-a494-34153ec07341.eot?#iefix") format("eot"),url("Fonts/777439/b5f227ec-a279-4258-ae68-a27ef54227e3.woff2") format("woff2"),url("Fonts/777439/e3d34dec-3139-44b1-8ded-314892605576.woff") format("woff"),url("Fonts/777439/45697ad3-712a-4d58-a6eb-913b20478c24.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Univers Next W01 Bold";
+        src:url("Fonts/777445/365d926e-03e5-4406-a883-fd0f9e462339.eot?#iefix");
+        src:url("Fonts/777445/365d926e-03e5-4406-a883-fd0f9e462339.eot?#iefix") format("eot"),url("Fonts/777445/043eef6e-81ef-483c-831c-7bfd6628554b.woff2") format("woff2"),url("Fonts/777445/7b11912a-986d-462e-b88a-4a1758eb23f1.woff") format("woff"),url("Fonts/777445/545a8d94-3389-418c-9b0a-bfc16d1f8285.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNextW01-BoldItal";
+        src:url("Fonts/777448/363c7c66-7435-4e2b-9945-a1bdfe59adc7.eot?#iefix");
+        src:url("Fonts/777448/363c7c66-7435-4e2b-9945-a1bdfe59adc7.eot?#iefix") format("eot"),url("Fonts/777448/d6e22582-9f22-4c1c-8087-8444c3c03ca2.woff2") format("woff2"),url("Fonts/777448/593b973b-bf84-480a-86ab-c7f15e05cb24.woff") format("woff"),url("Fonts/777448/e8a4f528-17fa-42d9-b486-9d41605ae975.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Univers Next W01 Heavy";
+        src:url("Fonts/777451/f1448bcf-579d-4ba3-b9b4-e027edea1939.eot?#iefix");
+        src:url("Fonts/777451/f1448bcf-579d-4ba3-b9b4-e027edea1939.eot?#iefix") format("eot"),url("Fonts/777451/f49779e6-03e4-45f9-804c-eb8f9c2a355e.woff2") format("woff2"),url("Fonts/777451/da5a3546-f1c4-4fdc-8667-b10898d0bfb3.woff") format("woff"),url("Fonts/777451/94728959-5fd1-42f0-840b-d4db4291e97a.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNextW01-HeavyIta";
+        src:url("Fonts/777454/f3398917-0bca-4a6e-8e7e-5a08fbf4f04f.eot?#iefix");
+        src:url("Fonts/777454/f3398917-0bca-4a6e-8e7e-5a08fbf4f04f.eot?#iefix") format("eot"),url("Fonts/777454/5ad16a87-147c-4115-8bab-8c389da2fe2d.woff2") format("woff2"),url("Fonts/777454/620d5a86-77f8-498a-a108-6476f650f455.woff") format("woff"),url("Fonts/777454/b59213bf-e322-434c-9b68-2ee66c439bf6.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Univers Next W01 Italic";
+        src:url("Fonts/777457/1704714d-e1a2-4c14-91b2-279e94ba5706.eot?#iefix");
+        src:url("Fonts/777457/1704714d-e1a2-4c14-91b2-279e94ba5706.eot?#iefix") format("eot"),url("Fonts/777457/c21cb708-eacd-40d7-931d-13b4b66fec3b.woff2") format("woff2"),url("Fonts/777457/00f88057-c6a6-448b-be2e-e8bc4a9c28d4.woff") format("woff"),url("Fonts/777457/4e503d23-4bcf-4a2f-b45f-846380d958c9.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Univers Next W01 Light";
+        src:url("Fonts/777460/63aa74f9-a724-4074-85c7-4167c0448227.eot?#iefix");
+        src:url("Fonts/777460/63aa74f9-a724-4074-85c7-4167c0448227.eot?#iefix") format("eot"),url("Fonts/777460/97c0f83d-39ac-412b-9d8a-d98208c0ce8d.woff2") format("woff2"),url("Fonts/777460/fc09acb4-f628-4ba0-b648-d2ca30265b20.woff") format("woff"),url("Fonts/777460/3cb4004c-2eea-45d4-a0b5-7af6f817c451.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNextW01-LightIta";
+        src:url("Fonts/777463/8c7fe4ab-375c-4be5-bba8-2c4d83ac807a.eot?#iefix");
+        src:url("Fonts/777463/8c7fe4ab-375c-4be5-bba8-2c4d83ac807a.eot?#iefix") format("eot"),url("Fonts/777463/b37595d7-d2c2-465d-81bd-f5bc289fc565.woff2") format("woff2"),url("Fonts/777463/88e0673d-3db0-4931-ae03-8a4a6eb1bbe6.woff") format("woff"),url("Fonts/777463/957860fc-f472-47cc-afcb-6305b3455894.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Univers Next W01 Medium";
+        src:url("Fonts/777466/07e1641d-6281-4461-827c-f3940fa0d811.eot?#iefix");
+        src:url("Fonts/777466/07e1641d-6281-4461-827c-f3940fa0d811.eot?#iefix") format("eot"),url("Fonts/777466/e8921ecc-af32-4c3d-9636-dd82b4225e40.woff2") format("woff2"),url("Fonts/777466/20f7bd07-85c9-4687-ab29-0b87584842ff.woff") format("woff"),url("Fonts/777466/2df6d56e-7f31-4175-88df-47d374d8bb60.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNextW01-MediumIt";
+        src:url("Fonts/777469/7af2167c-efe7-44d7-b2e1-6fdeeaa927c9.eot?#iefix");
+        src:url("Fonts/777469/7af2167c-efe7-44d7-b2e1-6fdeeaa927c9.eot?#iefix") format("eot"),url("Fonts/777469/8e26dc86-9708-4a36-89fb-a4416a5b9f5c.woff2") format("woff2"),url("Fonts/777469/c3b66848-d40c-458a-a977-7398cb9c1c82.woff") format("woff"),url("Fonts/777469/ea870cc2-efce-428c-af01-d00573ee4b0e.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNextW01-SCBlackI";
+        src:url("Fonts/777478/a3eda6d2-820b-40b7-8892-07e177ad8ded.eot?#iefix");
+        src:url("Fonts/777478/a3eda6d2-820b-40b7-8892-07e177ad8ded.eot?#iefix") format("eot"),url("Fonts/777478/be8290fb-13e7-4a53-87b7-48922e53e5bd.woff2") format("woff2"),url("Fonts/777478/ed8e8417-d241-4b54-bc23-2b937f68c6c9.woff") format("woff"),url("Fonts/777478/ad421c95-0492-4f74-aeba-ee86e4150894.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-120CdUlLt";
+        src:url("Fonts/1140233/69da81fe-33a2-4833-93c3-77d6116fd534.eot?#iefix");
+        src:url("Fonts/1140233/69da81fe-33a2-4833-93c3-77d6116fd534.eot?#iefix") format("eot"),url("Fonts/1140233/123d30d6-96db-42e3-b9d4-7501862036f9.woff2") format("woff2"),url("Fonts/1140233/73537007-b625-477e-b8f5-e51f6b90ba18.woff") format("woff"),url("Fonts/1140233/a62317f8-d500-46e1-be52-533338a1a522.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-121CdUlLtIt";
+        src:url("Fonts/1140236/85666cc8-b660-4b97-b387-f1d5e82ae533.eot?#iefix");
+        src:url("Fonts/1140236/85666cc8-b660-4b97-b387-f1d5e82ae533.eot?#iefix") format("eot"),url("Fonts/1140236/9fd96221-c955-4b5d-959a-3c4a86533cd7.woff2") format("woff2"),url("Fonts/1140236/25da88b6-6866-4135-9708-ecf9fc84735b.woff") format("woff"),url("Fonts/1140236/e973b241-b6a7-4581-b879-dc2a1510985f.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-130BUlLt";
+        src:url("Fonts/1140239/9484928c-795f-46cf-86d8-0fede76d28b2.eot?#iefix");
+        src:url("Fonts/1140239/9484928c-795f-46cf-86d8-0fede76d28b2.eot?#iefix") format("eot"),url("Fonts/1140239/a6d4a209-ad75-47c2-8569-689e2bbf2121.woff2") format("woff2"),url("Fonts/1140239/fcf79b00-2995-4702-949d-c7216550e17f.woff") format("woff"),url("Fonts/1140239/7c011985-5ab5-4e3e-b0bc-e9452da378ce.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-131BUlLtIt";
+        src:url("Fonts/1140242/c419e508-9eb7-498c-9ca0-4a3945965dcc.eot?#iefix");
+        src:url("Fonts/1140242/c419e508-9eb7-498c-9ca0-4a3945965dcc.eot?#iefix") format("eot"),url("Fonts/1140242/0a0929cf-d6df-4d1f-9d92-b00b69c4e724.woff2") format("woff2"),url("Fonts/1140242/fa16d14d-01da-43ed-a92f-e14b747f0dd7.woff") format("woff"),url("Fonts/1140242/1fae5c6d-9172-44e4-b407-3723fecab199.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-140XtdUlLt";
+        src:url("Fonts/1140245/654c2beb-8668-4806-88bd-95ac5079d94f.eot?#iefix");
+        src:url("Fonts/1140245/654c2beb-8668-4806-88bd-95ac5079d94f.eot?#iefix") format("eot"),url("Fonts/1140245/3bc04c3f-2a33-41a2-8f60-69afc4b280d8.woff2") format("woff2"),url("Fonts/1140245/466cf0a6-71e0-41dd-a55a-d2f7714c0d2c.woff") format("woff"),url("Fonts/1140245/9d8f17ac-86f3-42fd-a002-15c824f6b6f1.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-141XtdUlLtI";
+        src:url("Fonts/1140248/a78f5a8e-289b-403e-94b8-11de05346a17.eot?#iefix");
+        src:url("Fonts/1140248/a78f5a8e-289b-403e-94b8-11de05346a17.eot?#iefix") format("eot"),url("Fonts/1140248/1bd86c17-222f-4715-9e85-f9bed507e611.woff2") format("woff2"),url("Fonts/1140248/aaa0634f-4e29-47d2-9e2a-06d06e34f522.woff") format("woff"),url("Fonts/1140248/3f278b2b-6ac6-4b60-804e-a505d4028533.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-220CdThin";
+        src:url("Fonts/1140251/92898261-7c88-4d44-89e2-0c1a97f1f7b2.eot?#iefix");
+        src:url("Fonts/1140251/92898261-7c88-4d44-89e2-0c1a97f1f7b2.eot?#iefix") format("eot"),url("Fonts/1140251/420856b6-a3a9-4236-9769-59c9f593086c.woff2") format("woff2"),url("Fonts/1140251/df75700d-a811-4902-94bf-d9b23b44786d.woff") format("woff"),url("Fonts/1140251/0bc5719e-adb3-4ae5-b34a-b8618f8d7081.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-221CdThinIt";
+        src:url("Fonts/1140254/8697cdcb-1110-421e-90d7-dd3137908173.eot?#iefix");
+        src:url("Fonts/1140254/8697cdcb-1110-421e-90d7-dd3137908173.eot?#iefix") format("eot"),url("Fonts/1140254/058d61bb-17fd-481d-b0fe-0f283e19b0dd.woff2") format("woff2"),url("Fonts/1140254/3c23db90-fd46-4362-a0df-5d7c7b2a0272.woff") format("woff"),url("Fonts/1140254/193423bb-a625-4a67-a66b-3452c9e0fb2b.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-231BThinIt";
+        src:url("Fonts/1140260/f39a0cf1-cf88-41b7-b089-387cdc2924cc.eot?#iefix");
+        src:url("Fonts/1140260/f39a0cf1-cf88-41b7-b089-387cdc2924cc.eot?#iefix") format("eot"),url("Fonts/1140260/aa4aa6dc-e2ae-4e41-9819-2a0cd6d008a9.woff2") format("woff2"),url("Fonts/1140260/a0398ca1-c897-4227-8956-da638a082510.woff") format("woff"),url("Fonts/1140260/d5f64dda-54b8-4f23-a382-7a3ffb6c972d.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-240XtdThin";
+        src:url("Fonts/1140263/14b02b65-0102-4245-927a-4373ef3930fe.eot?#iefix");
+        src:url("Fonts/1140263/14b02b65-0102-4245-927a-4373ef3930fe.eot?#iefix") format("eot"),url("Fonts/1140263/89e26a8d-a832-4b24-86b8-8ad2672309ae.woff2") format("woff2"),url("Fonts/1140263/264e1540-e04b-495d-8532-fe564da878ea.woff") format("woff"),url("Fonts/1140263/0a57cc66-a44c-4a76-bd64-58050c4d0c9e.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-241XtdThinI";
+        src:url("Fonts/1140266/fab1b1da-58ac-41fb-8b23-6f99ed5f1eeb.eot?#iefix");
+        src:url("Fonts/1140266/fab1b1da-58ac-41fb-8b23-6f99ed5f1eeb.eot?#iefix") format("eot"),url("Fonts/1140266/8a06c8f4-0eb9-46dd-b844-6bef66fdde0a.woff2") format("woff2"),url("Fonts/1140266/e70c5b40-24f0-417a-bee5-d45feee1c5c5.woff") format("woff"),url("Fonts/1140266/7e3595aa-25ab-4b78-af65-94134f33a9c3.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Univers N W01_320 Cd Lt";
+        src:url("Fonts/1140269/53d3740d-eae3-4d70-b26e-12f3270930b2.eot?#iefix");
+        src:url("Fonts/1140269/53d3740d-eae3-4d70-b26e-12f3270930b2.eot?#iefix") format("eot"),url("Fonts/1140269/c4b1991c-283c-4183-9c41-393c84fec8a9.woff2") format("woff2"),url("Fonts/1140269/ea5d0a5d-6935-48e9-8e1a-40d788b29fc3.woff") format("woff"),url("Fonts/1140269/207ef27e-79d8-4ce2-8d12-99d92d27070c.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-321CdLtIt";
+        src:url("Fonts/1140272/fcc7a440-0cbd-4283-8971-6d74a6793d58.eot?#iefix");
+        src:url("Fonts/1140272/fcc7a440-0cbd-4283-8971-6d74a6793d58.eot?#iefix") format("eot"),url("Fonts/1140272/93af65da-af76-4acd-bbfe-32e00c683fe6.woff2") format("woff2"),url("Fonts/1140272/6298f5a0-004d-4507-b036-bb1e46781fda.woff") format("woff"),url("Fonts/1140272/06cfd5cd-94b9-4a67-b1c6-d1072e99ac25.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-620CdBold";
+        src:url("Fonts/1140275/9f0c8050-10a3-457c-ad2a-2203476a85ae.eot?#iefix");
+        src:url("Fonts/1140275/9f0c8050-10a3-457c-ad2a-2203476a85ae.eot?#iefix") format("eot"),url("Fonts/1140275/9bce1f08-7481-4271-ba4b-32219560eeec.woff2") format("woff2"),url("Fonts/1140275/387a924a-6aec-4120-918b-f34231ba2407.woff") format("woff"),url("Fonts/1140275/a45cb5fa-3034-4415-a80c-0ace7bd6a667.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-621CdBoldIt";
+        src:url("Fonts/1140278/7b7f4933-e37a-4b51-b298-c0de5947da0f.eot?#iefix");
+        src:url("Fonts/1140278/7b7f4933-e37a-4b51-b298-c0de5947da0f.eot?#iefix") format("eot"),url("Fonts/1140278/ddcd93e7-ac81-4658-8e15-0f0bcf09fd4f.woff2") format("woff2"),url("Fonts/1140278/0c32b1c9-91f4-46ab-b7cf-692a3368bd4a.woff") format("woff"),url("Fonts/1140278/c9ea03be-bba3-40d9-a7b2-9586753b233c.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-340XtdLt";
+        src:url("Fonts/1140281/65ecf649-ed94-40a6-b2d9-d23f733ecd56.eot?#iefix");
+        src:url("Fonts/1140281/65ecf649-ed94-40a6-b2d9-d23f733ecd56.eot?#iefix") format("eot"),url("Fonts/1140281/0fda6efa-0be7-48d3-85b0-ffa4fd1f0c57.woff2") format("woff2"),url("Fonts/1140281/d4155603-e462-40ed-82ed-a278e6892bbc.woff") format("woff"),url("Fonts/1140281/6c65de8f-063a-4946-a91a-1184107fe4d9.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-341XtdLtIt";
+        src:url("Fonts/1140284/52938782-879b-40c8-ae3a-fe7a638c81d3.eot?#iefix");
+        src:url("Fonts/1140284/52938782-879b-40c8-ae3a-fe7a638c81d3.eot?#iefix") format("eot"),url("Fonts/1140284/da20198e-15e6-48ff-9c6f-84869fffd7a6.woff2") format("woff2"),url("Fonts/1140284/25eefb50-8192-44e0-82d0-b6443a48be6b.woff") format("woff"),url("Fonts/1140284/4b6afdf5-9cc3-4d15-adc0-e8ef0d650e1e.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-640XtdBold";
+        src:url("Fonts/1140287/03e1d98a-00d2-40ac-a581-1246128de365.eot?#iefix");
+        src:url("Fonts/1140287/03e1d98a-00d2-40ac-a581-1246128de365.eot?#iefix") format("eot"),url("Fonts/1140287/635abde4-5cf0-490b-bd6e-b4f7eaf1d67e.woff2") format("woff2"),url("Fonts/1140287/49ce0972-51be-4523-a77c-8a64bf15d010.woff") format("woff"),url("Fonts/1140287/71364730-1cce-448d-b8b3-5f7217f9322b.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-641XtdBoldI";
+        src:url("Fonts/1140290/a6db4f10-c5ff-481a-86b5-1c0fd1673ff3.eot?#iefix");
+        src:url("Fonts/1140290/a6db4f10-c5ff-481a-86b5-1c0fd1673ff3.eot?#iefix") format("eot"),url("Fonts/1140290/188e5b71-91c0-4d1f-886b-d05aebf244c9.woff2") format("woff2"),url("Fonts/1140290/0b55e3bc-ed07-45b9-916a-2d01f8279192.woff") format("woff"),url("Fonts/1140290/9fe4bbb1-10e6-445b-820f-c9a4c5edf543.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-420CdRegula";
+        src:url("Fonts/1140293/fc0c93c0-ce96-4620-81d0-fc10038f9e0d.eot?#iefix");
+        src:url("Fonts/1140293/fc0c93c0-ce96-4620-81d0-fc10038f9e0d.eot?#iefix") format("eot"),url("Fonts/1140293/87746814-eb31-476e-a2b3-14954cbe7a09.woff2") format("woff2"),url("Fonts/1140293/6b207f04-a670-4f46-b749-47a7ae9612b8.woff") format("woff"),url("Fonts/1140293/d9fcc947-4ea2-4bcc-bbc2-6c7e6064ab74.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-720CdHeavy";
+        src:url("Fonts/1140299/e6b59fc8-2d46-4dc2-91fa-79531f80469b.eot?#iefix");
+        src:url("Fonts/1140299/e6b59fc8-2d46-4dc2-91fa-79531f80469b.eot?#iefix") format("eot"),url("Fonts/1140299/1e770e0a-1a0f-45d4-b4c6-5c323c324fb6.woff2") format("woff2"),url("Fonts/1140299/6fbcb29b-6cbb-4cf5-b283-34a7576afbd0.woff") format("woff"),url("Fonts/1140299/9504ab96-7cdc-4754-9df3-2d4026d860ac.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-721CdHeavyI";
+        src:url("Fonts/1140302/7d1b85b6-0214-40f3-a553-490d635566a5.eot?#iefix");
+        src:url("Fonts/1140302/7d1b85b6-0214-40f3-a553-490d635566a5.eot?#iefix") format("eot"),url("Fonts/1140302/c6aa9459-3176-445f-9f54-78280d3e4926.woff2") format("woff2"),url("Fonts/1140302/db713297-25df-4737-a1a2-ab7ce63e681d.woff") format("woff"),url("Fonts/1140302/64d570ba-b281-4726-a3f3-59c2a2cb53c7.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-440XtdRegul";
+        src:url("Fonts/1140305/fc2127ab-7b22-4278-9d08-5f0c04912129.eot?#iefix");
+        src:url("Fonts/1140305/fc2127ab-7b22-4278-9d08-5f0c04912129.eot?#iefix") format("eot"),url("Fonts/1140305/3eb2ece9-4776-48c0-80e0-df5033ceaa01.woff2") format("woff2"),url("Fonts/1140305/d1cf2dc8-7a45-42ea-9295-41e6d4128ab0.woff") format("woff"),url("Fonts/1140305/437ed8f1-4f84-424f-8c23-5574f3857392.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-441XtdIt";
+        src:url("Fonts/1140308/e7f0b17c-9947-4914-80de-90137a23234f.eot?#iefix");
+        src:url("Fonts/1140308/e7f0b17c-9947-4914-80de-90137a23234f.eot?#iefix") format("eot"),url("Fonts/1140308/5bbdb232-1a5c-4c2d-866a-9456396075e1.woff2") format("woff2"),url("Fonts/1140308/3d22e848-06a8-4790-bb8a-373b1b8fa588.woff") format("woff"),url("Fonts/1140308/6d959570-618e-4aac-a50b-4dfe37d0ff1c.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-740XtdHeavy";
+        src:url("Fonts/1140311/08b42a26-859e-4e88-a2cc-9d3b8e2e291c.eot?#iefix");
+        src:url("Fonts/1140311/08b42a26-859e-4e88-a2cc-9d3b8e2e291c.eot?#iefix") format("eot"),url("Fonts/1140311/30f33d69-9ddc-44a0-8f23-5905f6485bad.woff2") format("woff2"),url("Fonts/1140311/87a11da0-5c1e-4af5-96bb-6460ff0f7e0c.woff") format("woff"),url("Fonts/1140311/d82080b3-fbd5-44d9-acdc-9c42f1d89158.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-741XtdHeavy";
+        src:url("Fonts/1140314/497edcce-86e2-4b09-b4b9-d940bc9f43a4.eot?#iefix");
+        src:url("Fonts/1140314/497edcce-86e2-4b09-b4b9-d940bc9f43a4.eot?#iefix") format("eot"),url("Fonts/1140314/33a08d9a-f5e8-4faf-b9ef-9466f2d63c9e.woff2") format("woff2"),url("Fonts/1140314/18f66746-bcdd-4407-9323-0dfe9396b69d.woff") format("woff"),url("Fonts/1140314/f10ef947-8bde-477d-a5c2-72c9bd1c4b6a.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-520CdMedium";
+        src:url("Fonts/1140317/9f1b7e50-8980-4084-aa21-1c4f2f214923.eot?#iefix");
+        src:url("Fonts/1140317/9f1b7e50-8980-4084-aa21-1c4f2f214923.eot?#iefix") format("eot"),url("Fonts/1140317/518ad8ee-7986-4de6-bc5d-0bfa09fc0d9d.woff2") format("woff2"),url("Fonts/1140317/76766dbf-be05-4eca-8a2f-27d2bcec3ba8.woff") format("woff"),url("Fonts/1140317/4f9a2cd5-fa1e-4459-bfe8-dd1493b9ed98.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-521CdMedium";
+        src:url("Fonts/1140320/ca03457f-b28c-4d69-931f-f21207d4356d.eot?#iefix");
+        src:url("Fonts/1140320/ca03457f-b28c-4d69-931f-f21207d4356d.eot?#iefix") format("eot"),url("Fonts/1140320/40b64fdd-2f8e-406f-b0c6-a41ed749b404.woff2") format("woff2"),url("Fonts/1140320/1a533845-f6be-4422-8df1-310aa942bc00.woff") format("woff"),url("Fonts/1140320/12105c90-0823-4f06-9fc0-e9128e57e80d.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-820CdBlk";
+        src:url("Fonts/1140323/d059479e-7562-4f14-a40d-f128fbd37490.eot?#iefix");
+        src:url("Fonts/1140323/d059479e-7562-4f14-a40d-f128fbd37490.eot?#iefix") format("eot"),url("Fonts/1140323/a49e4fec-2800-42e3-a7bd-5f10ce59ac94.woff2") format("woff2"),url("Fonts/1140323/79239a95-af1c-414a-b1bb-a6b6ccc86499.woff") format("woff"),url("Fonts/1140323/f2cbcbfd-3afe-4b40-b89e-543ea449c662.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-821CdBlkIt";
+        src:url("Fonts/1140326/757fc323-9da1-46d1-ab19-5790f746dd1a.eot?#iefix");
+        src:url("Fonts/1140326/757fc323-9da1-46d1-ab19-5790f746dd1a.eot?#iefix") format("eot"),url("Fonts/1140326/5b2858f4-a718-431e-8539-bb7643343103.woff2") format("woff2"),url("Fonts/1140326/f91826d3-e401-474b-8d10-011c4e9f82fe.woff") format("woff"),url("Fonts/1140326/18048367-1cb9-4f6e-8606-88ad4564dc47.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-540XtdMediu";
+        src:url("Fonts/1140329/f2ee038f-ca68-4155-8ede-356f767dc2f6.eot?#iefix");
+        src:url("Fonts/1140329/f2ee038f-ca68-4155-8ede-356f767dc2f6.eot?#iefix") format("eot"),url("Fonts/1140329/d24701a8-9331-44a6-8583-79bf2b256c33.woff2") format("woff2"),url("Fonts/1140329/b2c8a350-a3c4-4325-b346-f8aa041a9ad7.woff") format("woff"),url("Fonts/1140329/78e1e5eb-65f2-4bce-98c8-2a087f79ba85.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-541XtdMediu";
+        src:url("Fonts/1140332/98ecf0b7-5fa5-43c5-a46c-57732c5f3ada.eot?#iefix");
+        src:url("Fonts/1140332/98ecf0b7-5fa5-43c5-a46c-57732c5f3ada.eot?#iefix") format("eot"),url("Fonts/1140332/a7a20087-c13e-4bb4-97ba-67344d1aade3.woff2") format("woff2"),url("Fonts/1140332/0c038ea2-d3a9-41e8-83dc-2c04e452200c.woff") format("woff"),url("Fonts/1140332/b9d8f87e-2416-47bd-a96b-2264adf0b404.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-840XtdBlk";
+        src:url("Fonts/1140335/16566f52-0adb-4157-bd5c-0b5abf6fc052.eot?#iefix");
+        src:url("Fonts/1140335/16566f52-0adb-4157-bd5c-0b5abf6fc052.eot?#iefix") format("eot"),url("Fonts/1140335/ac096361-89d1-4c96-bd88-715ed9525db7.woff2") format("woff2"),url("Fonts/1140335/4d2b10c0-f140-4457-b5e0-d43fa34ca5b3.woff") format("woff"),url("Fonts/1140335/3f15a3f6-306a-4acb-b920-a20cd972a01b.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-841XtdBlkIt";
+        src:url("Fonts/1140338/30d2f091-8626-4d8d-b744-fe3aeb85c9c9.eot?#iefix");
+        src:url("Fonts/1140338/30d2f091-8626-4d8d-b744-fe3aeb85c9c9.eot?#iefix") format("eot"),url("Fonts/1140338/60be0673-6dd8-4908-8d50-0334f4f09ebe.woff2") format("woff2"),url("Fonts/1140338/bf79fcc8-f2b9-4b10-a231-bba68ea3285b.woff") format("woff"),url("Fonts/1140338/1709181c-4999-48f0-bcde-6d15e6e7153d.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-920CdXBlk";
+        src:url("Fonts/1140341/9eeb33bb-e036-432e-bba5-9496a8971e43.eot?#iefix");
+        src:url("Fonts/1140341/9eeb33bb-e036-432e-bba5-9496a8971e43.eot?#iefix") format("eot"),url("Fonts/1140341/9762031b-d12a-4c94-b540-b320a7e8f138.woff2") format("woff2"),url("Fonts/1140341/f5a1e285-844d-4205-b59b-4b460f02cb3f.woff") format("woff"),url("Fonts/1140341/10a5438e-959e-4980-8172-9d7dc09a7036.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-921CdXBlkIt";
+        src:url("Fonts/1140344/eb78149a-1ebe-48ea-9d07-c527bdec8315.eot?#iefix");
+        src:url("Fonts/1140344/eb78149a-1ebe-48ea-9d07-c527bdec8315.eot?#iefix") format("eot"),url("Fonts/1140344/0aa0e637-d946-4fe7-b778-b5b84eac8ebe.woff2") format("woff2"),url("Fonts/1140344/8d4f77f7-1e6c-4e3a-82e4-52e05e727961.woff") format("woff"),url("Fonts/1140344/cb473a7c-92db-42ca-a3c6-9b2e3240cb6e.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-930BXBlk";
+        src:url("Fonts/1140347/88a16ccb-f4b2-4efb-b456-c157c8690155.eot?#iefix");
+        src:url("Fonts/1140347/88a16ccb-f4b2-4efb-b456-c157c8690155.eot?#iefix") format("eot"),url("Fonts/1140347/bac1b39b-eefb-416d-bbe5-a78d378cb66d.woff2") format("woff2"),url("Fonts/1140347/67a1ce67-66ad-450a-a3d6-98e15f534199.woff") format("woff"),url("Fonts/1140347/0f00b780-4ce0-41e4-8c17-684ffcb96e9d.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-931BXBlkIt";
+        src:url("Fonts/1140350/b8822d99-a40f-4b43-9b24-3e60782324a4.eot?#iefix");
+        src:url("Fonts/1140350/b8822d99-a40f-4b43-9b24-3e60782324a4.eot?#iefix") format("eot"),url("Fonts/1140350/a81cdbc0-405e-427a-8b24-3a812527a403.woff2") format("woff2"),url("Fonts/1140350/2404663e-fc66-42e4-90b8-37b4cc61c2e8.woff") format("woff"),url("Fonts/1140350/ea0ccd4b-d230-42dd-98cf-ad3c09f2c77e.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-940XtdXBlk";
+        src:url("Fonts/1140353/7c40a1f7-05cf-44f2-9c35-1dd84aea2c3b.eot?#iefix");
+        src:url("Fonts/1140353/7c40a1f7-05cf-44f2-9c35-1dd84aea2c3b.eot?#iefix") format("eot"),url("Fonts/1140353/c085d315-4c1b-46af-a33a-ac4f03123e99.woff2") format("woff2"),url("Fonts/1140353/5e2e190e-693c-4f76-85bc-e66bb07831f5.woff") format("woff"),url("Fonts/1140353/35508b96-e021-4ba5-907c-793458720fe7.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-941XtdXBlkI";
+        src:url("Fonts/1140356/6f11b043-13b8-4f13-a381-0b6e4cf615ba.eot?#iefix");
+        src:url("Fonts/1140356/6f11b043-13b8-4f13-a381-0b6e4cf615ba.eot?#iefix") format("eot"),url("Fonts/1140356/51481dc4-5973-416e-af52-5e452fb7d3bd.woff2") format("woff2"),url("Fonts/1140356/3eff3a9a-a3d6-4ded-a647-33598251afcc.woff") format("woff"),url("Fonts/1140356/0914f85f-e411-4c9f-b128-b6ec78a363a8.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-110CmpUlLt";
+        src:url("Fonts/1140359/58f2fa59-2624-450d-8976-43a35e2f207c.eot?#iefix");
+        src:url("Fonts/1140359/58f2fa59-2624-450d-8976-43a35e2f207c.eot?#iefix") format("eot"),url("Fonts/1140359/50ca5550-0856-4ef4-aac1-0c07a0e23dae.woff2") format("woff2"),url("Fonts/1140359/b14d03eb-ab26-4118-8120-6e7303e2b36d.woff") format("woff"),url("Fonts/1140359/e6bb2bd7-3d14-447a-867f-af30cc9b7d45.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-210CmpThin";
+        src:url("Fonts/1140362/aa8b96b5-1ee6-44c4-a6bc-c6b994104271.eot?#iefix");
+        src:url("Fonts/1140362/aa8b96b5-1ee6-44c4-a6bc-c6b994104271.eot?#iefix") format("eot"),url("Fonts/1140362/8b55bee2-64cf-4a50-9c03-3a42dcda84e2.woff2") format("woff2"),url("Fonts/1140362/dcf27618-5331-4a1e-99b0-795828f8f3b0.woff") format("woff"),url("Fonts/1140362/a332c4ed-2a9e-4bfb-9a24-70c8ce72c017.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-310CmpLt";
+        src:url("Fonts/1140365/bb5b2336-ad56-4129-a7cb-796190e0f6f7.eot?#iefix");
+        src:url("Fonts/1140365/bb5b2336-ad56-4129-a7cb-796190e0f6f7.eot?#iefix") format("eot"),url("Fonts/1140365/de8f1c09-1c7e-47fd-82f2-1eb345492593.woff2") format("woff2"),url("Fonts/1140365/bb2eceb2-8efc-4d46-a2be-37d5af01f1ad.woff") format("woff"),url("Fonts/1140365/79a7b7bf-f38a-4fde-b2e8-8f14459b0390.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Univers N W01_410 Cmp";
+        src:url("Fonts/1140368/e87a56f0-8596-4fbf-ae43-aa842ab2e7a2.eot?#iefix");
+        src:url("Fonts/1140368/e87a56f0-8596-4fbf-ae43-aa842ab2e7a2.eot?#iefix") format("eot"),url("Fonts/1140368/60657622-c915-42d4-b120-461cb53a15cb.woff2") format("woff2"),url("Fonts/1140368/7fafa073-511f-47bf-9b94-5a859a735e47.woff") format("woff"),url("Fonts/1140368/1f1a9974-47c1-4439-94fd-18d29c78510d.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-510CmpMediu";
+        src:url("Fonts/1140371/7d793037-5b12-4e8f-8233-8613a9f01749.eot?#iefix");
+        src:url("Fonts/1140371/7d793037-5b12-4e8f-8233-8613a9f01749.eot?#iefix") format("eot"),url("Fonts/1140371/098d6184-6f69-4e95-abd0-76a0312a9b6f.woff2") format("woff2"),url("Fonts/1140371/20ac48ab-f7dd-4ea0-aae4-45190f596837.woff") format("woff"),url("Fonts/1140371/d752df6d-77e4-42d0-99ae-85b9a67dd573.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01SC-230BThin";
+        src:url("Fonts/1142038/dae1c85d-e749-4604-85ee-270803955dd6.eot?#iefix");
+        src:url("Fonts/1142038/dae1c85d-e749-4604-85ee-270803955dd6.eot?#iefix") format("eot"),url("Fonts/1142038/c4b2f41a-4b5b-4c7e-a6ff-318db364d043.woff2") format("woff2"),url("Fonts/1142038/aac5adab-ee0b-4d76-b0ab-4512139de1a2.woff") format("woff"),url("Fonts/1142038/c11931a4-fc16-48ff-a302-2d8761e9f4d1.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01SC-421CdIt";
+        src:url("Fonts/1142071/282d6307-9edd-43bb-b593-66ae70402feb.eot?#iefix");
+        src:url("Fonts/1142071/282d6307-9edd-43bb-b593-66ae70402feb.eot?#iefix") format("eot"),url("Fonts/1142071/4c9be9a7-10dd-42b3-8596-06ab28e877d5.woff2") format("woff2"),url("Fonts/1142071/143ddbd6-2ac0-4820-9a54-356c419ae67c.woff") format("woff"),url("Fonts/1142071/c2c2043e-1013-46dd-a635-b61ea34b94d5.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Univers Next W01 Regular";
+        src:url("Fonts/5656272/7c5665cc-627d-480c-a01d-5cef72cf43a4.eot?#iefix");
+        src:url("Fonts/5656272/7c5665cc-627d-480c-a01d-5cef72cf43a4.eot?#iefix") format("eot"),url("Fonts/5656272/74e1830b-1468-4905-a73d-e2b6d1e690d6.woff2") format("woff2"),url("Fonts/5656272/e43bae6d-8805-4214-8f2d-0489865368aa.woff") format("woff"),url("Fonts/5656272/2bceebc9-7164-4633-b492-a89cb32368b1.ttf") format("truetype");
+    }
+&#x3C;/style&#x3E;  			
+                    </code>          
+                    </div>
+					
+                   
+                </div>
+            </div>			
+	  
+	    </div>
+                </li>
+                <li style="display:block">
+				
+                  <!--[if lt IE 9]>
+                    <a href="#tabbox" tabindex="2">tab 2</a>
+                  <![endif]-->
+                  <![if (!IE)|(gte IE 9)]>
+                    <input type="radio" name="tabs" id="tab2">
+                    <label for="tab2">Javascript</label>
+                  <![endif]>
+                    <div id="tab-content2" class="tab-content">
+                        <div id="examples-2" class="textarea-example">
+                            <div id="content-2" class="content">
+                                <p>The asynchronous script loads in the background allowing the other elements of your website to load first and undeterred.</p>
+
+								<div class="code-wrapper" contenteditable="true">
+								<code>
+&#x3C;script type=&#x22;text/javascript&#x22;&#x3E;
+    var MTUserId='5182abcd-92db-4145-9d65-ec7903fc02fe';
+    var MTFontIds = new Array();
+
+    MTFontIds.push("777439"); // Univers® Next W01 830 Basic Black 
+    MTFontIds.push("777445"); // Univers® Next W01 630 Basic Bold 
+    MTFontIds.push("777448"); // Univers® Next W01 631 Basic Bold Italic 
+    MTFontIds.push("777451"); // Univers® Next W01 730 Basic Heavy 
+    MTFontIds.push("777454"); // Univers® Next W01 731 Heavy Italic 
+    MTFontIds.push("777457"); // Univers® Next W01 431 Basic Italic 
+    MTFontIds.push("777460"); // Univers® Next W01 330 Basic Light 
+    MTFontIds.push("777463"); // Univers® Next W01 331 Basic Light Italic 
+    MTFontIds.push("777466"); // Univers® Next W01 530 Basic Medium 
+    MTFontIds.push("777469"); // Univers® Next W01 531 Basic Medium Italic 
+    MTFontIds.push("777478"); // Univers® Next W01 831 Basic Black Italic SC 
+    MTFontIds.push("1140233"); // Univers® Next W01 120 Condensed Ultra Light 
+    MTFontIds.push("1140236"); // Univers® Next W01 121 Condensed Ultra Light Italic 
+    MTFontIds.push("1140239"); // Univers® Next W01 130 Basic Ultra Light 
+    MTFontIds.push("1140242"); // Univers® Next W01 131 Basic Ultra Light Italic 
+    MTFontIds.push("1140245"); // Univers® Next W01 140 Extended Ultra Light 
+    MTFontIds.push("1140248"); // Univers® Next W01 141 Extended Ultra Light Italic 
+    MTFontIds.push("1140251"); // Univers® Next W01 220 Condensed Thin 
+    MTFontIds.push("1140254"); // Univers® Next W01 221 Condensed Thin Italic 
+    MTFontIds.push("1140260"); // Univers® Next W01 231 Basic Thin Italic 
+    MTFontIds.push("1140263"); // Univers® Next W01 240 Extended Thin 
+    MTFontIds.push("1140266"); // Univers® Next W01 241 Extended Thin Italic 
+    MTFontIds.push("1140269"); // Univers® Next W01 320 Condensed Light 
+    MTFontIds.push("1140272"); // Univers® Next W01 321 Condensed Light Italic 
+    MTFontIds.push("1140275"); // Univers® Next W01 620 Condensed Bold 
+    MTFontIds.push("1140278"); // Univers® Next W01 621 Condensed Bold Italic 
+    MTFontIds.push("1140281"); // Univers® Next W01 340 Extended Light 
+    MTFontIds.push("1140284"); // Univers® Next W01 341 Extended Light Italic 
+    MTFontIds.push("1140287"); // Univers® Next W01 640 Extended Bold 
+    MTFontIds.push("1140290"); // Univers® Next W01 641 Extended Bold Italic 
+    MTFontIds.push("1140293"); // Univers® Next W01 420 Condensed Regular 
+    MTFontIds.push("1140299"); // Univers® Next W01 720 Condensed Heavy 
+    MTFontIds.push("1140302"); // Univers® Next W01 721 Condensed Heavy Italic 
+    MTFontIds.push("1140305"); // Univers® Next W01 440 Extended Regular 
+    MTFontIds.push("1140308"); // Univers® Next W01 441 Extended Regular Italic 
+    MTFontIds.push("1140311"); // Univers® Next W01 740 Extended Heavy 
+    MTFontIds.push("1140314"); // Univers® Next W01 741 Extended Heavy Italic 
+    MTFontIds.push("1140317"); // Univers® Next W01 520 Condensed Medium 
+    MTFontIds.push("1140320"); // Univers® Next W01 521 Condensed Medium Italic 
+    MTFontIds.push("1140323"); // Univers® Next W01 820 Condensed Black 
+    MTFontIds.push("1140326"); // Univers® Next W01 821 Condensed Black Italic 
+    MTFontIds.push("1140329"); // Univers® Next W01 540 Extended Medium 
+    MTFontIds.push("1140332"); // Univers® Next W01 541 Extended Medium Italic 
+    MTFontIds.push("1140335"); // Univers® Next W01 840 Extended Black 
+    MTFontIds.push("1140338"); // Univers® Next W01 841 Extended Black Italic 
+    MTFontIds.push("1140341"); // Univers® Next W01 920 Condensed Extra Black 
+    MTFontIds.push("1140344"); // Univers® Next W01 921 Condensed Extra Black Italic 
+    MTFontIds.push("1140347"); // Univers® Next W01 930 Basic Extra Black 
+    MTFontIds.push("1140350"); // Univers® Next W01 931 Basic Extra Black Italic 
+    MTFontIds.push("1140353"); // Univers® Next W01 940 Extended Extra Black 
+    MTFontIds.push("1140356"); // Univers® Next W01 941 Extended Extra Black Italic 
+    MTFontIds.push("1140359"); // Univers® Next W01 110 Compressed Ultra Light 
+    MTFontIds.push("1140362"); // Univers® Next W01 210 Compressed Thin 
+    MTFontIds.push("1140365"); // Univers® Next W01 310 Compressed Light 
+    MTFontIds.push("1140368"); // Univers® Next W01 410 Compressed 
+    MTFontIds.push("1140371"); // Univers® Next W01 510 Compressed Medium 
+    MTFontIds.push("1142038"); // Univers® Next W01 230 Basic Thin SC 
+    MTFontIds.push("1142071"); // Univers® Next W01 421 Condensed Italic SC 
+    MTFontIds.push("5656272"); // Univers® Next W01 430 Basic Regular 
+    (function() {
+        var mtTracking = document.createElement('script');
+        mtTracking.type='text/javascript';
+        mtTracking.async='true';
+        mtTracking.src='mtiFontTrackingCode.js';
+
+        (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(mtTracking);
+    })();
+&#x3C;/script&#x3E;
+
+&#x3C;style type=&#x22;text/css&#x22;&#x3E;
+    @font-face{
+        font-family:"Univers Next W01 Black";
+        src:url("Fonts/777439/fdffeb1c-176a-47ea-a494-34153ec07341.eot?#iefix");
+        src:url("Fonts/777439/fdffeb1c-176a-47ea-a494-34153ec07341.eot?#iefix") format("eot"),url("Fonts/777439/b5f227ec-a279-4258-ae68-a27ef54227e3.woff2") format("woff2"),url("Fonts/777439/e3d34dec-3139-44b1-8ded-314892605576.woff") format("woff"),url("Fonts/777439/45697ad3-712a-4d58-a6eb-913b20478c24.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Univers Next W01 Bold";
+        src:url("Fonts/777445/365d926e-03e5-4406-a883-fd0f9e462339.eot?#iefix");
+        src:url("Fonts/777445/365d926e-03e5-4406-a883-fd0f9e462339.eot?#iefix") format("eot"),url("Fonts/777445/043eef6e-81ef-483c-831c-7bfd6628554b.woff2") format("woff2"),url("Fonts/777445/7b11912a-986d-462e-b88a-4a1758eb23f1.woff") format("woff"),url("Fonts/777445/545a8d94-3389-418c-9b0a-bfc16d1f8285.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNextW01-BoldItal";
+        src:url("Fonts/777448/363c7c66-7435-4e2b-9945-a1bdfe59adc7.eot?#iefix");
+        src:url("Fonts/777448/363c7c66-7435-4e2b-9945-a1bdfe59adc7.eot?#iefix") format("eot"),url("Fonts/777448/d6e22582-9f22-4c1c-8087-8444c3c03ca2.woff2") format("woff2"),url("Fonts/777448/593b973b-bf84-480a-86ab-c7f15e05cb24.woff") format("woff"),url("Fonts/777448/e8a4f528-17fa-42d9-b486-9d41605ae975.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Univers Next W01 Heavy";
+        src:url("Fonts/777451/f1448bcf-579d-4ba3-b9b4-e027edea1939.eot?#iefix");
+        src:url("Fonts/777451/f1448bcf-579d-4ba3-b9b4-e027edea1939.eot?#iefix") format("eot"),url("Fonts/777451/f49779e6-03e4-45f9-804c-eb8f9c2a355e.woff2") format("woff2"),url("Fonts/777451/da5a3546-f1c4-4fdc-8667-b10898d0bfb3.woff") format("woff"),url("Fonts/777451/94728959-5fd1-42f0-840b-d4db4291e97a.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNextW01-HeavyIta";
+        src:url("Fonts/777454/f3398917-0bca-4a6e-8e7e-5a08fbf4f04f.eot?#iefix");
+        src:url("Fonts/777454/f3398917-0bca-4a6e-8e7e-5a08fbf4f04f.eot?#iefix") format("eot"),url("Fonts/777454/5ad16a87-147c-4115-8bab-8c389da2fe2d.woff2") format("woff2"),url("Fonts/777454/620d5a86-77f8-498a-a108-6476f650f455.woff") format("woff"),url("Fonts/777454/b59213bf-e322-434c-9b68-2ee66c439bf6.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Univers Next W01 Italic";
+        src:url("Fonts/777457/1704714d-e1a2-4c14-91b2-279e94ba5706.eot?#iefix");
+        src:url("Fonts/777457/1704714d-e1a2-4c14-91b2-279e94ba5706.eot?#iefix") format("eot"),url("Fonts/777457/c21cb708-eacd-40d7-931d-13b4b66fec3b.woff2") format("woff2"),url("Fonts/777457/00f88057-c6a6-448b-be2e-e8bc4a9c28d4.woff") format("woff"),url("Fonts/777457/4e503d23-4bcf-4a2f-b45f-846380d958c9.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Univers Next W01 Light";
+        src:url("Fonts/777460/63aa74f9-a724-4074-85c7-4167c0448227.eot?#iefix");
+        src:url("Fonts/777460/63aa74f9-a724-4074-85c7-4167c0448227.eot?#iefix") format("eot"),url("Fonts/777460/97c0f83d-39ac-412b-9d8a-d98208c0ce8d.woff2") format("woff2"),url("Fonts/777460/fc09acb4-f628-4ba0-b648-d2ca30265b20.woff") format("woff"),url("Fonts/777460/3cb4004c-2eea-45d4-a0b5-7af6f817c451.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNextW01-LightIta";
+        src:url("Fonts/777463/8c7fe4ab-375c-4be5-bba8-2c4d83ac807a.eot?#iefix");
+        src:url("Fonts/777463/8c7fe4ab-375c-4be5-bba8-2c4d83ac807a.eot?#iefix") format("eot"),url("Fonts/777463/b37595d7-d2c2-465d-81bd-f5bc289fc565.woff2") format("woff2"),url("Fonts/777463/88e0673d-3db0-4931-ae03-8a4a6eb1bbe6.woff") format("woff"),url("Fonts/777463/957860fc-f472-47cc-afcb-6305b3455894.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Univers Next W01 Medium";
+        src:url("Fonts/777466/07e1641d-6281-4461-827c-f3940fa0d811.eot?#iefix");
+        src:url("Fonts/777466/07e1641d-6281-4461-827c-f3940fa0d811.eot?#iefix") format("eot"),url("Fonts/777466/e8921ecc-af32-4c3d-9636-dd82b4225e40.woff2") format("woff2"),url("Fonts/777466/20f7bd07-85c9-4687-ab29-0b87584842ff.woff") format("woff"),url("Fonts/777466/2df6d56e-7f31-4175-88df-47d374d8bb60.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNextW01-MediumIt";
+        src:url("Fonts/777469/7af2167c-efe7-44d7-b2e1-6fdeeaa927c9.eot?#iefix");
+        src:url("Fonts/777469/7af2167c-efe7-44d7-b2e1-6fdeeaa927c9.eot?#iefix") format("eot"),url("Fonts/777469/8e26dc86-9708-4a36-89fb-a4416a5b9f5c.woff2") format("woff2"),url("Fonts/777469/c3b66848-d40c-458a-a977-7398cb9c1c82.woff") format("woff"),url("Fonts/777469/ea870cc2-efce-428c-af01-d00573ee4b0e.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNextW01-SCBlackI";
+        src:url("Fonts/777478/a3eda6d2-820b-40b7-8892-07e177ad8ded.eot?#iefix");
+        src:url("Fonts/777478/a3eda6d2-820b-40b7-8892-07e177ad8ded.eot?#iefix") format("eot"),url("Fonts/777478/be8290fb-13e7-4a53-87b7-48922e53e5bd.woff2") format("woff2"),url("Fonts/777478/ed8e8417-d241-4b54-bc23-2b937f68c6c9.woff") format("woff"),url("Fonts/777478/ad421c95-0492-4f74-aeba-ee86e4150894.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-120CdUlLt";
+        src:url("Fonts/1140233/69da81fe-33a2-4833-93c3-77d6116fd534.eot?#iefix");
+        src:url("Fonts/1140233/69da81fe-33a2-4833-93c3-77d6116fd534.eot?#iefix") format("eot"),url("Fonts/1140233/123d30d6-96db-42e3-b9d4-7501862036f9.woff2") format("woff2"),url("Fonts/1140233/73537007-b625-477e-b8f5-e51f6b90ba18.woff") format("woff"),url("Fonts/1140233/a62317f8-d500-46e1-be52-533338a1a522.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-121CdUlLtIt";
+        src:url("Fonts/1140236/85666cc8-b660-4b97-b387-f1d5e82ae533.eot?#iefix");
+        src:url("Fonts/1140236/85666cc8-b660-4b97-b387-f1d5e82ae533.eot?#iefix") format("eot"),url("Fonts/1140236/9fd96221-c955-4b5d-959a-3c4a86533cd7.woff2") format("woff2"),url("Fonts/1140236/25da88b6-6866-4135-9708-ecf9fc84735b.woff") format("woff"),url("Fonts/1140236/e973b241-b6a7-4581-b879-dc2a1510985f.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-130BUlLt";
+        src:url("Fonts/1140239/9484928c-795f-46cf-86d8-0fede76d28b2.eot?#iefix");
+        src:url("Fonts/1140239/9484928c-795f-46cf-86d8-0fede76d28b2.eot?#iefix") format("eot"),url("Fonts/1140239/a6d4a209-ad75-47c2-8569-689e2bbf2121.woff2") format("woff2"),url("Fonts/1140239/fcf79b00-2995-4702-949d-c7216550e17f.woff") format("woff"),url("Fonts/1140239/7c011985-5ab5-4e3e-b0bc-e9452da378ce.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-131BUlLtIt";
+        src:url("Fonts/1140242/c419e508-9eb7-498c-9ca0-4a3945965dcc.eot?#iefix");
+        src:url("Fonts/1140242/c419e508-9eb7-498c-9ca0-4a3945965dcc.eot?#iefix") format("eot"),url("Fonts/1140242/0a0929cf-d6df-4d1f-9d92-b00b69c4e724.woff2") format("woff2"),url("Fonts/1140242/fa16d14d-01da-43ed-a92f-e14b747f0dd7.woff") format("woff"),url("Fonts/1140242/1fae5c6d-9172-44e4-b407-3723fecab199.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-140XtdUlLt";
+        src:url("Fonts/1140245/654c2beb-8668-4806-88bd-95ac5079d94f.eot?#iefix");
+        src:url("Fonts/1140245/654c2beb-8668-4806-88bd-95ac5079d94f.eot?#iefix") format("eot"),url("Fonts/1140245/3bc04c3f-2a33-41a2-8f60-69afc4b280d8.woff2") format("woff2"),url("Fonts/1140245/466cf0a6-71e0-41dd-a55a-d2f7714c0d2c.woff") format("woff"),url("Fonts/1140245/9d8f17ac-86f3-42fd-a002-15c824f6b6f1.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-141XtdUlLtI";
+        src:url("Fonts/1140248/a78f5a8e-289b-403e-94b8-11de05346a17.eot?#iefix");
+        src:url("Fonts/1140248/a78f5a8e-289b-403e-94b8-11de05346a17.eot?#iefix") format("eot"),url("Fonts/1140248/1bd86c17-222f-4715-9e85-f9bed507e611.woff2") format("woff2"),url("Fonts/1140248/aaa0634f-4e29-47d2-9e2a-06d06e34f522.woff") format("woff"),url("Fonts/1140248/3f278b2b-6ac6-4b60-804e-a505d4028533.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-220CdThin";
+        src:url("Fonts/1140251/92898261-7c88-4d44-89e2-0c1a97f1f7b2.eot?#iefix");
+        src:url("Fonts/1140251/92898261-7c88-4d44-89e2-0c1a97f1f7b2.eot?#iefix") format("eot"),url("Fonts/1140251/420856b6-a3a9-4236-9769-59c9f593086c.woff2") format("woff2"),url("Fonts/1140251/df75700d-a811-4902-94bf-d9b23b44786d.woff") format("woff"),url("Fonts/1140251/0bc5719e-adb3-4ae5-b34a-b8618f8d7081.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-221CdThinIt";
+        src:url("Fonts/1140254/8697cdcb-1110-421e-90d7-dd3137908173.eot?#iefix");
+        src:url("Fonts/1140254/8697cdcb-1110-421e-90d7-dd3137908173.eot?#iefix") format("eot"),url("Fonts/1140254/058d61bb-17fd-481d-b0fe-0f283e19b0dd.woff2") format("woff2"),url("Fonts/1140254/3c23db90-fd46-4362-a0df-5d7c7b2a0272.woff") format("woff"),url("Fonts/1140254/193423bb-a625-4a67-a66b-3452c9e0fb2b.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-231BThinIt";
+        src:url("Fonts/1140260/f39a0cf1-cf88-41b7-b089-387cdc2924cc.eot?#iefix");
+        src:url("Fonts/1140260/f39a0cf1-cf88-41b7-b089-387cdc2924cc.eot?#iefix") format("eot"),url("Fonts/1140260/aa4aa6dc-e2ae-4e41-9819-2a0cd6d008a9.woff2") format("woff2"),url("Fonts/1140260/a0398ca1-c897-4227-8956-da638a082510.woff") format("woff"),url("Fonts/1140260/d5f64dda-54b8-4f23-a382-7a3ffb6c972d.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-240XtdThin";
+        src:url("Fonts/1140263/14b02b65-0102-4245-927a-4373ef3930fe.eot?#iefix");
+        src:url("Fonts/1140263/14b02b65-0102-4245-927a-4373ef3930fe.eot?#iefix") format("eot"),url("Fonts/1140263/89e26a8d-a832-4b24-86b8-8ad2672309ae.woff2") format("woff2"),url("Fonts/1140263/264e1540-e04b-495d-8532-fe564da878ea.woff") format("woff"),url("Fonts/1140263/0a57cc66-a44c-4a76-bd64-58050c4d0c9e.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-241XtdThinI";
+        src:url("Fonts/1140266/fab1b1da-58ac-41fb-8b23-6f99ed5f1eeb.eot?#iefix");
+        src:url("Fonts/1140266/fab1b1da-58ac-41fb-8b23-6f99ed5f1eeb.eot?#iefix") format("eot"),url("Fonts/1140266/8a06c8f4-0eb9-46dd-b844-6bef66fdde0a.woff2") format("woff2"),url("Fonts/1140266/e70c5b40-24f0-417a-bee5-d45feee1c5c5.woff") format("woff"),url("Fonts/1140266/7e3595aa-25ab-4b78-af65-94134f33a9c3.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Univers N W01_320 Cd Lt";
+        src:url("Fonts/1140269/53d3740d-eae3-4d70-b26e-12f3270930b2.eot?#iefix");
+        src:url("Fonts/1140269/53d3740d-eae3-4d70-b26e-12f3270930b2.eot?#iefix") format("eot"),url("Fonts/1140269/c4b1991c-283c-4183-9c41-393c84fec8a9.woff2") format("woff2"),url("Fonts/1140269/ea5d0a5d-6935-48e9-8e1a-40d788b29fc3.woff") format("woff"),url("Fonts/1140269/207ef27e-79d8-4ce2-8d12-99d92d27070c.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-321CdLtIt";
+        src:url("Fonts/1140272/fcc7a440-0cbd-4283-8971-6d74a6793d58.eot?#iefix");
+        src:url("Fonts/1140272/fcc7a440-0cbd-4283-8971-6d74a6793d58.eot?#iefix") format("eot"),url("Fonts/1140272/93af65da-af76-4acd-bbfe-32e00c683fe6.woff2") format("woff2"),url("Fonts/1140272/6298f5a0-004d-4507-b036-bb1e46781fda.woff") format("woff"),url("Fonts/1140272/06cfd5cd-94b9-4a67-b1c6-d1072e99ac25.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-620CdBold";
+        src:url("Fonts/1140275/9f0c8050-10a3-457c-ad2a-2203476a85ae.eot?#iefix");
+        src:url("Fonts/1140275/9f0c8050-10a3-457c-ad2a-2203476a85ae.eot?#iefix") format("eot"),url("Fonts/1140275/9bce1f08-7481-4271-ba4b-32219560eeec.woff2") format("woff2"),url("Fonts/1140275/387a924a-6aec-4120-918b-f34231ba2407.woff") format("woff"),url("Fonts/1140275/a45cb5fa-3034-4415-a80c-0ace7bd6a667.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-621CdBoldIt";
+        src:url("Fonts/1140278/7b7f4933-e37a-4b51-b298-c0de5947da0f.eot?#iefix");
+        src:url("Fonts/1140278/7b7f4933-e37a-4b51-b298-c0de5947da0f.eot?#iefix") format("eot"),url("Fonts/1140278/ddcd93e7-ac81-4658-8e15-0f0bcf09fd4f.woff2") format("woff2"),url("Fonts/1140278/0c32b1c9-91f4-46ab-b7cf-692a3368bd4a.woff") format("woff"),url("Fonts/1140278/c9ea03be-bba3-40d9-a7b2-9586753b233c.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-340XtdLt";
+        src:url("Fonts/1140281/65ecf649-ed94-40a6-b2d9-d23f733ecd56.eot?#iefix");
+        src:url("Fonts/1140281/65ecf649-ed94-40a6-b2d9-d23f733ecd56.eot?#iefix") format("eot"),url("Fonts/1140281/0fda6efa-0be7-48d3-85b0-ffa4fd1f0c57.woff2") format("woff2"),url("Fonts/1140281/d4155603-e462-40ed-82ed-a278e6892bbc.woff") format("woff"),url("Fonts/1140281/6c65de8f-063a-4946-a91a-1184107fe4d9.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-341XtdLtIt";
+        src:url("Fonts/1140284/52938782-879b-40c8-ae3a-fe7a638c81d3.eot?#iefix");
+        src:url("Fonts/1140284/52938782-879b-40c8-ae3a-fe7a638c81d3.eot?#iefix") format("eot"),url("Fonts/1140284/da20198e-15e6-48ff-9c6f-84869fffd7a6.woff2") format("woff2"),url("Fonts/1140284/25eefb50-8192-44e0-82d0-b6443a48be6b.woff") format("woff"),url("Fonts/1140284/4b6afdf5-9cc3-4d15-adc0-e8ef0d650e1e.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-640XtdBold";
+        src:url("Fonts/1140287/03e1d98a-00d2-40ac-a581-1246128de365.eot?#iefix");
+        src:url("Fonts/1140287/03e1d98a-00d2-40ac-a581-1246128de365.eot?#iefix") format("eot"),url("Fonts/1140287/635abde4-5cf0-490b-bd6e-b4f7eaf1d67e.woff2") format("woff2"),url("Fonts/1140287/49ce0972-51be-4523-a77c-8a64bf15d010.woff") format("woff"),url("Fonts/1140287/71364730-1cce-448d-b8b3-5f7217f9322b.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-641XtdBoldI";
+        src:url("Fonts/1140290/a6db4f10-c5ff-481a-86b5-1c0fd1673ff3.eot?#iefix");
+        src:url("Fonts/1140290/a6db4f10-c5ff-481a-86b5-1c0fd1673ff3.eot?#iefix") format("eot"),url("Fonts/1140290/188e5b71-91c0-4d1f-886b-d05aebf244c9.woff2") format("woff2"),url("Fonts/1140290/0b55e3bc-ed07-45b9-916a-2d01f8279192.woff") format("woff"),url("Fonts/1140290/9fe4bbb1-10e6-445b-820f-c9a4c5edf543.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-420CdRegula";
+        src:url("Fonts/1140293/fc0c93c0-ce96-4620-81d0-fc10038f9e0d.eot?#iefix");
+        src:url("Fonts/1140293/fc0c93c0-ce96-4620-81d0-fc10038f9e0d.eot?#iefix") format("eot"),url("Fonts/1140293/87746814-eb31-476e-a2b3-14954cbe7a09.woff2") format("woff2"),url("Fonts/1140293/6b207f04-a670-4f46-b749-47a7ae9612b8.woff") format("woff"),url("Fonts/1140293/d9fcc947-4ea2-4bcc-bbc2-6c7e6064ab74.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-720CdHeavy";
+        src:url("Fonts/1140299/e6b59fc8-2d46-4dc2-91fa-79531f80469b.eot?#iefix");
+        src:url("Fonts/1140299/e6b59fc8-2d46-4dc2-91fa-79531f80469b.eot?#iefix") format("eot"),url("Fonts/1140299/1e770e0a-1a0f-45d4-b4c6-5c323c324fb6.woff2") format("woff2"),url("Fonts/1140299/6fbcb29b-6cbb-4cf5-b283-34a7576afbd0.woff") format("woff"),url("Fonts/1140299/9504ab96-7cdc-4754-9df3-2d4026d860ac.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-721CdHeavyI";
+        src:url("Fonts/1140302/7d1b85b6-0214-40f3-a553-490d635566a5.eot?#iefix");
+        src:url("Fonts/1140302/7d1b85b6-0214-40f3-a553-490d635566a5.eot?#iefix") format("eot"),url("Fonts/1140302/c6aa9459-3176-445f-9f54-78280d3e4926.woff2") format("woff2"),url("Fonts/1140302/db713297-25df-4737-a1a2-ab7ce63e681d.woff") format("woff"),url("Fonts/1140302/64d570ba-b281-4726-a3f3-59c2a2cb53c7.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-440XtdRegul";
+        src:url("Fonts/1140305/fc2127ab-7b22-4278-9d08-5f0c04912129.eot?#iefix");
+        src:url("Fonts/1140305/fc2127ab-7b22-4278-9d08-5f0c04912129.eot?#iefix") format("eot"),url("Fonts/1140305/3eb2ece9-4776-48c0-80e0-df5033ceaa01.woff2") format("woff2"),url("Fonts/1140305/d1cf2dc8-7a45-42ea-9295-41e6d4128ab0.woff") format("woff"),url("Fonts/1140305/437ed8f1-4f84-424f-8c23-5574f3857392.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-441XtdIt";
+        src:url("Fonts/1140308/e7f0b17c-9947-4914-80de-90137a23234f.eot?#iefix");
+        src:url("Fonts/1140308/e7f0b17c-9947-4914-80de-90137a23234f.eot?#iefix") format("eot"),url("Fonts/1140308/5bbdb232-1a5c-4c2d-866a-9456396075e1.woff2") format("woff2"),url("Fonts/1140308/3d22e848-06a8-4790-bb8a-373b1b8fa588.woff") format("woff"),url("Fonts/1140308/6d959570-618e-4aac-a50b-4dfe37d0ff1c.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-740XtdHeavy";
+        src:url("Fonts/1140311/08b42a26-859e-4e88-a2cc-9d3b8e2e291c.eot?#iefix");
+        src:url("Fonts/1140311/08b42a26-859e-4e88-a2cc-9d3b8e2e291c.eot?#iefix") format("eot"),url("Fonts/1140311/30f33d69-9ddc-44a0-8f23-5905f6485bad.woff2") format("woff2"),url("Fonts/1140311/87a11da0-5c1e-4af5-96bb-6460ff0f7e0c.woff") format("woff"),url("Fonts/1140311/d82080b3-fbd5-44d9-acdc-9c42f1d89158.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-741XtdHeavy";
+        src:url("Fonts/1140314/497edcce-86e2-4b09-b4b9-d940bc9f43a4.eot?#iefix");
+        src:url("Fonts/1140314/497edcce-86e2-4b09-b4b9-d940bc9f43a4.eot?#iefix") format("eot"),url("Fonts/1140314/33a08d9a-f5e8-4faf-b9ef-9466f2d63c9e.woff2") format("woff2"),url("Fonts/1140314/18f66746-bcdd-4407-9323-0dfe9396b69d.woff") format("woff"),url("Fonts/1140314/f10ef947-8bde-477d-a5c2-72c9bd1c4b6a.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-520CdMedium";
+        src:url("Fonts/1140317/9f1b7e50-8980-4084-aa21-1c4f2f214923.eot?#iefix");
+        src:url("Fonts/1140317/9f1b7e50-8980-4084-aa21-1c4f2f214923.eot?#iefix") format("eot"),url("Fonts/1140317/518ad8ee-7986-4de6-bc5d-0bfa09fc0d9d.woff2") format("woff2"),url("Fonts/1140317/76766dbf-be05-4eca-8a2f-27d2bcec3ba8.woff") format("woff"),url("Fonts/1140317/4f9a2cd5-fa1e-4459-bfe8-dd1493b9ed98.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-521CdMedium";
+        src:url("Fonts/1140320/ca03457f-b28c-4d69-931f-f21207d4356d.eot?#iefix");
+        src:url("Fonts/1140320/ca03457f-b28c-4d69-931f-f21207d4356d.eot?#iefix") format("eot"),url("Fonts/1140320/40b64fdd-2f8e-406f-b0c6-a41ed749b404.woff2") format("woff2"),url("Fonts/1140320/1a533845-f6be-4422-8df1-310aa942bc00.woff") format("woff"),url("Fonts/1140320/12105c90-0823-4f06-9fc0-e9128e57e80d.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-820CdBlk";
+        src:url("Fonts/1140323/d059479e-7562-4f14-a40d-f128fbd37490.eot?#iefix");
+        src:url("Fonts/1140323/d059479e-7562-4f14-a40d-f128fbd37490.eot?#iefix") format("eot"),url("Fonts/1140323/a49e4fec-2800-42e3-a7bd-5f10ce59ac94.woff2") format("woff2"),url("Fonts/1140323/79239a95-af1c-414a-b1bb-a6b6ccc86499.woff") format("woff"),url("Fonts/1140323/f2cbcbfd-3afe-4b40-b89e-543ea449c662.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-821CdBlkIt";
+        src:url("Fonts/1140326/757fc323-9da1-46d1-ab19-5790f746dd1a.eot?#iefix");
+        src:url("Fonts/1140326/757fc323-9da1-46d1-ab19-5790f746dd1a.eot?#iefix") format("eot"),url("Fonts/1140326/5b2858f4-a718-431e-8539-bb7643343103.woff2") format("woff2"),url("Fonts/1140326/f91826d3-e401-474b-8d10-011c4e9f82fe.woff") format("woff"),url("Fonts/1140326/18048367-1cb9-4f6e-8606-88ad4564dc47.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-540XtdMediu";
+        src:url("Fonts/1140329/f2ee038f-ca68-4155-8ede-356f767dc2f6.eot?#iefix");
+        src:url("Fonts/1140329/f2ee038f-ca68-4155-8ede-356f767dc2f6.eot?#iefix") format("eot"),url("Fonts/1140329/d24701a8-9331-44a6-8583-79bf2b256c33.woff2") format("woff2"),url("Fonts/1140329/b2c8a350-a3c4-4325-b346-f8aa041a9ad7.woff") format("woff"),url("Fonts/1140329/78e1e5eb-65f2-4bce-98c8-2a087f79ba85.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-541XtdMediu";
+        src:url("Fonts/1140332/98ecf0b7-5fa5-43c5-a46c-57732c5f3ada.eot?#iefix");
+        src:url("Fonts/1140332/98ecf0b7-5fa5-43c5-a46c-57732c5f3ada.eot?#iefix") format("eot"),url("Fonts/1140332/a7a20087-c13e-4bb4-97ba-67344d1aade3.woff2") format("woff2"),url("Fonts/1140332/0c038ea2-d3a9-41e8-83dc-2c04e452200c.woff") format("woff"),url("Fonts/1140332/b9d8f87e-2416-47bd-a96b-2264adf0b404.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-840XtdBlk";
+        src:url("Fonts/1140335/16566f52-0adb-4157-bd5c-0b5abf6fc052.eot?#iefix");
+        src:url("Fonts/1140335/16566f52-0adb-4157-bd5c-0b5abf6fc052.eot?#iefix") format("eot"),url("Fonts/1140335/ac096361-89d1-4c96-bd88-715ed9525db7.woff2") format("woff2"),url("Fonts/1140335/4d2b10c0-f140-4457-b5e0-d43fa34ca5b3.woff") format("woff"),url("Fonts/1140335/3f15a3f6-306a-4acb-b920-a20cd972a01b.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-841XtdBlkIt";
+        src:url("Fonts/1140338/30d2f091-8626-4d8d-b744-fe3aeb85c9c9.eot?#iefix");
+        src:url("Fonts/1140338/30d2f091-8626-4d8d-b744-fe3aeb85c9c9.eot?#iefix") format("eot"),url("Fonts/1140338/60be0673-6dd8-4908-8d50-0334f4f09ebe.woff2") format("woff2"),url("Fonts/1140338/bf79fcc8-f2b9-4b10-a231-bba68ea3285b.woff") format("woff"),url("Fonts/1140338/1709181c-4999-48f0-bcde-6d15e6e7153d.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-920CdXBlk";
+        src:url("Fonts/1140341/9eeb33bb-e036-432e-bba5-9496a8971e43.eot?#iefix");
+        src:url("Fonts/1140341/9eeb33bb-e036-432e-bba5-9496a8971e43.eot?#iefix") format("eot"),url("Fonts/1140341/9762031b-d12a-4c94-b540-b320a7e8f138.woff2") format("woff2"),url("Fonts/1140341/f5a1e285-844d-4205-b59b-4b460f02cb3f.woff") format("woff"),url("Fonts/1140341/10a5438e-959e-4980-8172-9d7dc09a7036.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-921CdXBlkIt";
+        src:url("Fonts/1140344/eb78149a-1ebe-48ea-9d07-c527bdec8315.eot?#iefix");
+        src:url("Fonts/1140344/eb78149a-1ebe-48ea-9d07-c527bdec8315.eot?#iefix") format("eot"),url("Fonts/1140344/0aa0e637-d946-4fe7-b778-b5b84eac8ebe.woff2") format("woff2"),url("Fonts/1140344/8d4f77f7-1e6c-4e3a-82e4-52e05e727961.woff") format("woff"),url("Fonts/1140344/cb473a7c-92db-42ca-a3c6-9b2e3240cb6e.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-930BXBlk";
+        src:url("Fonts/1140347/88a16ccb-f4b2-4efb-b456-c157c8690155.eot?#iefix");
+        src:url("Fonts/1140347/88a16ccb-f4b2-4efb-b456-c157c8690155.eot?#iefix") format("eot"),url("Fonts/1140347/bac1b39b-eefb-416d-bbe5-a78d378cb66d.woff2") format("woff2"),url("Fonts/1140347/67a1ce67-66ad-450a-a3d6-98e15f534199.woff") format("woff"),url("Fonts/1140347/0f00b780-4ce0-41e4-8c17-684ffcb96e9d.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-931BXBlkIt";
+        src:url("Fonts/1140350/b8822d99-a40f-4b43-9b24-3e60782324a4.eot?#iefix");
+        src:url("Fonts/1140350/b8822d99-a40f-4b43-9b24-3e60782324a4.eot?#iefix") format("eot"),url("Fonts/1140350/a81cdbc0-405e-427a-8b24-3a812527a403.woff2") format("woff2"),url("Fonts/1140350/2404663e-fc66-42e4-90b8-37b4cc61c2e8.woff") format("woff"),url("Fonts/1140350/ea0ccd4b-d230-42dd-98cf-ad3c09f2c77e.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-940XtdXBlk";
+        src:url("Fonts/1140353/7c40a1f7-05cf-44f2-9c35-1dd84aea2c3b.eot?#iefix");
+        src:url("Fonts/1140353/7c40a1f7-05cf-44f2-9c35-1dd84aea2c3b.eot?#iefix") format("eot"),url("Fonts/1140353/c085d315-4c1b-46af-a33a-ac4f03123e99.woff2") format("woff2"),url("Fonts/1140353/5e2e190e-693c-4f76-85bc-e66bb07831f5.woff") format("woff"),url("Fonts/1140353/35508b96-e021-4ba5-907c-793458720fe7.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-941XtdXBlkI";
+        src:url("Fonts/1140356/6f11b043-13b8-4f13-a381-0b6e4cf615ba.eot?#iefix");
+        src:url("Fonts/1140356/6f11b043-13b8-4f13-a381-0b6e4cf615ba.eot?#iefix") format("eot"),url("Fonts/1140356/51481dc4-5973-416e-af52-5e452fb7d3bd.woff2") format("woff2"),url("Fonts/1140356/3eff3a9a-a3d6-4ded-a647-33598251afcc.woff") format("woff"),url("Fonts/1140356/0914f85f-e411-4c9f-b128-b6ec78a363a8.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-110CmpUlLt";
+        src:url("Fonts/1140359/58f2fa59-2624-450d-8976-43a35e2f207c.eot?#iefix");
+        src:url("Fonts/1140359/58f2fa59-2624-450d-8976-43a35e2f207c.eot?#iefix") format("eot"),url("Fonts/1140359/50ca5550-0856-4ef4-aac1-0c07a0e23dae.woff2") format("woff2"),url("Fonts/1140359/b14d03eb-ab26-4118-8120-6e7303e2b36d.woff") format("woff"),url("Fonts/1140359/e6bb2bd7-3d14-447a-867f-af30cc9b7d45.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-210CmpThin";
+        src:url("Fonts/1140362/aa8b96b5-1ee6-44c4-a6bc-c6b994104271.eot?#iefix");
+        src:url("Fonts/1140362/aa8b96b5-1ee6-44c4-a6bc-c6b994104271.eot?#iefix") format("eot"),url("Fonts/1140362/8b55bee2-64cf-4a50-9c03-3a42dcda84e2.woff2") format("woff2"),url("Fonts/1140362/dcf27618-5331-4a1e-99b0-795828f8f3b0.woff") format("woff"),url("Fonts/1140362/a332c4ed-2a9e-4bfb-9a24-70c8ce72c017.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-310CmpLt";
+        src:url("Fonts/1140365/bb5b2336-ad56-4129-a7cb-796190e0f6f7.eot?#iefix");
+        src:url("Fonts/1140365/bb5b2336-ad56-4129-a7cb-796190e0f6f7.eot?#iefix") format("eot"),url("Fonts/1140365/de8f1c09-1c7e-47fd-82f2-1eb345492593.woff2") format("woff2"),url("Fonts/1140365/bb2eceb2-8efc-4d46-a2be-37d5af01f1ad.woff") format("woff"),url("Fonts/1140365/79a7b7bf-f38a-4fde-b2e8-8f14459b0390.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Univers N W01_410 Cmp";
+        src:url("Fonts/1140368/e87a56f0-8596-4fbf-ae43-aa842ab2e7a2.eot?#iefix");
+        src:url("Fonts/1140368/e87a56f0-8596-4fbf-ae43-aa842ab2e7a2.eot?#iefix") format("eot"),url("Fonts/1140368/60657622-c915-42d4-b120-461cb53a15cb.woff2") format("woff2"),url("Fonts/1140368/7fafa073-511f-47bf-9b94-5a859a735e47.woff") format("woff"),url("Fonts/1140368/1f1a9974-47c1-4439-94fd-18d29c78510d.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01-510CmpMediu";
+        src:url("Fonts/1140371/7d793037-5b12-4e8f-8233-8613a9f01749.eot?#iefix");
+        src:url("Fonts/1140371/7d793037-5b12-4e8f-8233-8613a9f01749.eot?#iefix") format("eot"),url("Fonts/1140371/098d6184-6f69-4e95-abd0-76a0312a9b6f.woff2") format("woff2"),url("Fonts/1140371/20ac48ab-f7dd-4ea0-aae4-45190f596837.woff") format("woff"),url("Fonts/1140371/d752df6d-77e4-42d0-99ae-85b9a67dd573.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01SC-230BThin";
+        src:url("Fonts/1142038/dae1c85d-e749-4604-85ee-270803955dd6.eot?#iefix");
+        src:url("Fonts/1142038/dae1c85d-e749-4604-85ee-270803955dd6.eot?#iefix") format("eot"),url("Fonts/1142038/c4b2f41a-4b5b-4c7e-a6ff-318db364d043.woff2") format("woff2"),url("Fonts/1142038/aac5adab-ee0b-4d76-b0ab-4512139de1a2.woff") format("woff"),url("Fonts/1142038/c11931a4-fc16-48ff-a302-2d8761e9f4d1.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"UniversNW01SC-421CdIt";
+        src:url("Fonts/1142071/282d6307-9edd-43bb-b593-66ae70402feb.eot?#iefix");
+        src:url("Fonts/1142071/282d6307-9edd-43bb-b593-66ae70402feb.eot?#iefix") format("eot"),url("Fonts/1142071/4c9be9a7-10dd-42b3-8596-06ab28e877d5.woff2") format("woff2"),url("Fonts/1142071/143ddbd6-2ac0-4820-9a54-356c419ae67c.woff") format("woff"),url("Fonts/1142071/c2c2043e-1013-46dd-a635-b61ea34b94d5.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Univers Next W01 Regular";
+        src:url("Fonts/5656272/7c5665cc-627d-480c-a01d-5cef72cf43a4.eot?#iefix");
+        src:url("Fonts/5656272/7c5665cc-627d-480c-a01d-5cef72cf43a4.eot?#iefix") format("eot"),url("Fonts/5656272/74e1830b-1468-4905-a73d-e2b6d1e690d6.woff2") format("woff2"),url("Fonts/5656272/e43bae6d-8805-4214-8f2d-0489865368aa.woff") format("woff"),url("Fonts/5656272/2bceebc9-7164-4633-b492-a89cb32368b1.ttf") format("truetype");
+    }
+
+&#x3C;/style&#x3E;                               
+								</code>
+                                </div>    
+                 
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>            
+            <br style="clear:both;">                        
+            <h2 class="heavy-font">Legal Information</h2>
+            <p>You and any third party web font hosting service are responsible for ensuring that the font software in the self-hosting kit, in its orginal format, can <b>only be used on the websites for which the self hosting kit was downloaded</b> and cannot be used or referenced by any other websites.</p>
+            <p>This includes, but is not limited to <b>installing adequate technical protection measures</b> that restrict the user and/or access to the font software, for instance by utilizing JavaScript or access control mechanism for cross-origin resource sharing and protection against use on websites other than the websites for which the self-hosting kit was downloaded by restricting domain access only to such websites.</p>
+            <p>You must also <b>retain the page view tracking code </b>on any website that you self-host.In the event this agreement terminates for any reason, the font software included with the self-hosting kit must be deleted from the server and all copies must be destroyed or returned to Monotype.</p>
+            <p>Licensing information should be included within the CSS:</p>
+            <p>
+                <div class="note-bg">
+                    <pre>/*
+        This CSS resource incorporates links to font software which is the valuable copyrighted property of Monotype and/or its suppliers. You may not attempt to copy, install, redistribute, convert, modify or reverse engineer this font software. Please contact Monotype with any questions regarding Web Fonts:  https://www.linotype.com
+        */</pre>
+                </div>
+            </p>
+        </div>
+                
+                    <div class="clear"></div>
+                          
+  
+			</ul>
+	<footer class="wrapper">
+        &copy; Monotype | <a href="https://www.linotype.com/53/contact.html">Contact</a> | <a href="https://www.linotype.com/2061/imprint-legal.html">Legal</a> | <a href="http://www.linotype.com">Linotype.com</a>
+    </footer>
+    <!-- Google CDN jQuery with fallback to local -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+    </script>
+    <!-- custom scrollbar plugin -->
+   
+    <script>
+    (function($) {
+        // For Accordion
+        $('.accordionButton').click(function() {
+            $('.accordionButton').removeClass('on');
+            $('.accordionContent').slideUp('normal');
+            $('.plusMinus').text('+');
+            if ($(this).next().is(':hidden') == true) {
+                $(this).addClass('on');
+                $(this).next().slideDown('normal');
+                $(this).children('.plusMinus').text('-');
+            }
+        });
+        $('.accordionButton').mouseover(function() {
+            $(this).addClass('over');
+        }).mouseout(function() {
+            $(this).removeClass('over');
+        });
+        $('.accordionContent').hide();
+
+        // For Textarea
+        var textareaLineHeight = parseInt($(".textarea-wrapper textarea").css("line-height"));
+
+
+        var enterTypetester = function() {
+            //var $cursor = $('.b-typetester__cursor', this);
+            $(this).removeClass('initial');
+            $(this).find('.text-data__cursor').hide();
+        };
+
+        $('.textarea-wrapper ').on('click', '.text-data__write', enterTypetester);
+
+    })(jQuery);
+    </script>
+</body>
+
+</html>

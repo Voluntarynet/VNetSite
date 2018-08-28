@@ -1,359 +1,457 @@
-        ::-webkit-scrollbar {
-            width: 15px;
-        }
 
-        ::-webkit-scrollbar-track-piece {
-            background-color: #fff;
-        }
+/*
+    ::-webkit-scrollbar {
+        width: 15px;
+    }
 
-        ::-webkit-scrollbar-thumb:vertical {
-            background-color: #ddd;
-        }
+    ::-webkit-scrollbar-track-piece {
+        background-color: transparent;
+    }
 
+    ::-webkit-scrollbar-thumb:vertical {
+        background-color: #ddd;
+    }
+*/
 
-        body {
-            position: absolute;
-            overflow-x: hidden;
-            overflow-y: scroll;
-            top: 0px;
-            left: 0px;
-            height: 100%;
-            width: 100%;
-            padding: 0px;
-            margin: 0px;
-            border: 0px;
-            background-color: #fff;
-            zoom: 100%;
+    body {
+        background: #faf5f0;
+        -webkit-overflow-scrolling: touch;
 
-            /* text-size-adjust fixes issue with contenteditable fonts being tiny */
-            text-size-adjust: 100%;
-            -ms-text-size-adjust: 100%;
-            -moz-text-size-adjust: 100%;
-            -webkit-text-size-adjust: 100%;
+        position: absolute;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        border: 0px;
+        background-color: #fff;
+        zoom: 100%;
 
-            font-family: "Proxima N W01 Thin Reg", "Helvetica", "Sans-Serif";
-            /* -webkit-font-smoothing: antialiased;*/
-            color: white;
-            text-align: center;
-        }
+        /* text-size-adjust fixes issue with contenteditable fonts being tiny */
+        text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        -moz-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
 
-        .Page {
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 180px;
-
-            padding-left: 100px;
-            padding-right: 100px;
-            padding-top: 180px;
-            padding-bottom: 180px;
-            height: 100%;
-            text-align: left;
-
-            border: 0px dashed yellow;
-        }
-
-        .PageHeader {
-            margin: 0px;
-            padding-bottom: 35px;
-            text-align: left;
-            border-bottom: 0px #555 solid;
-        }
-
-        .PageTitle {
-            font-family: "Proxima N W01 Smbd", "Open Sans", "Helvetica", "Sans-Serif";
-            font-size: 1.9em;
-            color: #000;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border: 0px dashed yellow;
-            white-space: nowrap;
-            padding-bottom: 5px;
-            /*padding-bottom: 25px;*/
-        }
-
-        .PageTitleSuffix {
-            font-family: "Proxima N W01 Light", "Open Sans", "Helvetica", "Sans-Serif";
-            display: inline-block;
-            color: #bbb;
-            margin-left: 1px;
-        }
-
-        .PageSubtitle {
-            font-family: "Proxima N W01 Smbd", "Open Sans", "Helvetica", "Sans-Serif";
-            display: block;
-            letter-spacing: 0.5px;
-            color: #000;
-            font-size: 15px;
-            text-transform: capitalize;
-            margin-top: 20px;
-            margin-bottom: 40px;
-            /*
-            -webkit-font-smoothing: antialiased;
-            */
-        }
+        font-family: "Proxima N W01 Thin Reg", "Helvetica", "Sans-Serif";
+        /* -webkit-font-smoothing: antialiased;*/
+        color: white;
+    }
+    
+    
+    .Header {
+        display: block;
+        overflow: hidden;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        min-width: 100%;
+        text-align: left;
         
-        .PageSubtitleComponent {
-            display: inline-block;
-            color: #aaa;
-        }
+        padding-left: 0px;
+        padding-right: 0px;
 
+        background: white;
+        border: 0px dashed red;
+    }
+    
+    .HeaderContent {
+        display: block;
+        width: auto;
+        text-align: left;
+        margin-left: 50px;
+        margin-right: 50px;
+
+        padding-top: 65px;
+        padding-bottom: 30px;            
+        padding-left: 0px;
+        padding-right: 0px;
+
+        text-align: left;
+        background: white;
+        border-bottom: 1px solid #ddd;
+    }
+    
+
+    .Page {
+        /* background-color: rgb(248, 248, 248);*/
+
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
         
-        .PageSubtitleComponent:hover {
-            color: #000;
-        }
+        margin-top: 0px;
+        margin-bottom: 0px;
+
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 230px;
+        padding-bottom: 180px;
         
-        .PageSubtitleComponentDivider {
-            display: inline-block;
-            color: #aaa;
-            padding-left: 8px;
-            padding-right: 8px;
-        }
+        text-align: left;
+
+        border: 0px dashed yellow;
+    }
+
+    .PageHeader {
+        margin: 0px;
+        padding-bottom: 0px;
+        text-align: left;
+        border-bottom: 0px #555 solid;
+    }
+
+    .PageTitle {
+        font-family: "Proxima N W01 Smbd", "Open Sans", "Helvetica", "Sans-Serif";
+        font-size: 1.9em;
+        color: #000;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border: 0px dashed yellow;
+        white-space: nowrap;
+        padding-bottom: 5px;
+        /*padding-bottom: 25px;*/
+    }
+
+    .PageTitleSuffix {
+        font-family: "Proxima N W01 Light", "Open Sans", "Helvetica", "Sans-Serif";
+        display: inline-block;
+        color: #bbb;
+        margin-left: 6px;
+    }
+
+    .PageTagline {
+        font-family: "Proxima N W01 Reg", "Open Sans", "Helvetica", "Sans-Serif";
+        display: block;
+        color: #bbb;
+        margin-top: 20px;
+        margin-bottom: 2.5em;
+        font-size: 15px;
+        line-height: 1.5;
+
+    }
+    
+    .PageSubtitle {
+        font-family: "Proxima N W01 Smbd", "Open Sans", "Helvetica", "Sans-Serif";
+        display: block;
+        letter-spacing: 0.5px;
+        color: #000;
+        font-size: 15px;
+        text-transform: capitalize;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        /*
+        -webkit-font-smoothing: antialiased;
+        */
+    }
+    
+    .PageSubtitleComponent {
+        display: inline-block;
+        color: #aaa;
+    }
+
+    
+    .PageSubtitleComponent:hover {
+        color: #000;
+    }
+    
+    .PageSubtitleComponentDivider {
+        display: inline-block;
+        color: #aaa;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    
+    .PageSubtitleComponent_Selected {
+        display: inline-block;
+        color: #000;
+    }
+
+    .ProductImage {
+        padding-top: 20px;
+        width: 100%;
+        max-width: 600px;
+        filter: grayscale(95%);
+        opacity: 0.85;
+    }
+
+    a {
+        font-family: "Univers Next W01 Medium";
+        text-decoration: none;
+        color: #999;
+        letter-spacing: -0.5px;
+    }
+
+    a:hover {
+        color: #000;
+        text-decoration: none;
+    }
+
+    li {
+        line-height: 1.2em;
+        padding-left: 20px;
+        margin-left: 0px;
+        margin-bottom: 7px;
+    }
+
+    li:before {
+        content: "·";
+        padding-right: 5px;
+    }
+
+    ul {
+        list-style: none;
+        margin-left: 0;
+        padding-left: 1em;
+        text-indent: -1em;
+    }
+
+    .AppIcon {
+        display: none;
+        position: absolute;
+        left: 10%;
+        top: 80px;
+        width: 65px;
+        height: auto;
+        padding-bottom: 30px;
+        margin-bottom: 10px;
+        opacity: 0.1;
+    }
+    
+    
+    /* -------------------------------- */
+
+    .PageTagline {
+        display: none;
+    }
+
+    /*
+     .VSection2 {
+        margin-top: 0px;
+        margin-bottom: 25px;
         
-        .PageSubtitleComponent_Selected {
-            display: inline-block;
-            color: #000;
-        }
-
-        .PageMenus {
-            display: block;
-            border: 0px dashed red;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            padding: 0px;
-            text-align: left;
-        }
-
-        .PageMenu {
-            display: block;
-            font-family: "Proxima N W01 Reg", "Open Sans", "Helvetica", "Sans-Serif";
-            text-transform: capitalize;
-            font-size: 15px;
-            letter-spacing: 0.5px;
-            text-align: left;
-            width: 100px;
-
-            padding-top: 0px;
-            padding-bottom: 4px;
-            padding-left: 0px;
-            padding-right: 6px;
-
-            margin-top: 0px;
-            margin-bottom: 0px;
-            margin-left: 0px;
-            margin-right: auto;
-
-
-
-            border: 0px dashed #aaa;
-            color: #aaa;
-            transition: 0.2s ease-in-out;
-        }
-
-        .PageMenu:hover {
-            color: black;
-        }
-
-        .PageMenu_Selected {
-            color: black;
-        }
-
-
-        .Content {
-            font-family: "Proxima N W01 Light", "Proxima N W01 Reg";
-            display: block;
-            overflow: hidden;
-            max-width: 600px;
-
-            /*
-            color: rgb(136, 136, 136);
-            */
-            color: #000;
-            font-size: 16px;
-            font-weight: 300;
-            line-height: 1.6;
-            text-align: left;
-            border: 0px dashed blue;
-
-            margin-left: auto;
-            margin-right: auto;
-            padding-bottom: 100px;
-        }
-
-        .Button {
-            font-family: "Proxima N W01 Reg";
-            display: inline-block;
-            padding-top: 6px;
-            padding-bottom: 8px;
-            margin-right: 20px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            text-align: center;
-            color: #000;
-
-            border: 1px solid rgb(104, 104, 104);
-            width: 150px;
-            border-radius: 4px;
-            -webkit-font-smoothing: antialiased;
-            text-transform: uppercase;
-            transition: 0.15s ease-in-out;
-        }
-
-        .Button:hover {
-            color: #fff;
-            background-color: #222;
-        }
-
-        .Paragraph {
-            font-family: "Proxima N W01 Reg";
-            margin-top: 20px;
-            margin-bottom: 20px;
-            text-transform: none;
-            font-size: 15px;
-            color: #000;
-            max-width: 600px;
-        }
+        padding-top: 0px;
+        padding-left: 20px;   
         
-        .ProductTitle {
-            display: none;
-            font-family: "Proxima N W01 Smbd";
-            letter-spacing: 1px;
-            margin-top: 20px;
-            margin-bottom: 0px;
-            text-transform: none;
-            font-size: 15px;
-            color: #000;
-        }
+        border-left: 1px solid #ddd;
+    }
+    */
+           
+    .VSection {
+        margin-top: 0px;
+        margin-bottom: 25px;
         
-        .ProductSubtitle {
-            display: none;
-            font-family: "Proxima N W01 Light";
-            letter-spacing: 1px;
-            margin-top: 0px;
-            margin-bottom: 20px;
-            text-transform: none;
-            font-size: 15px;
-            color: #000;
-        }
+        padding-top: 0px;
+        padding-left: 0px;   
         
-        .ProductDescription {
-            font-family: "Proxima N W01 Reg";
-            letter-spacing: 0px;
-            margin-top: 0px;
-            margin-bottom: 35px;
-            text-transform: none;
-            font-size: 15px;
-            color: #000;
-        }
-
-        .ProductDescription_SectionTitle {
-            display: block;
-            font-family: "Proxima N W01 Smbd";
-            letter-spacing: 1px;
-            margin-top: 20px;
-            margin-bottom: 0px;
-            text-transform: capitalize;
-            font-size: 15px;
-            color: #000;
-        }
-
-        .ProductDescription_SectionContent {
-            font-family: "Proxima N W01 Reg";
-            letter-spacing: 0px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            text-transform: none;
-            font-size: 15px;
-            color: #000;
-        }
+        border-left: 0px solid #ddd;
+    }
+    
+    .SectionTitle0 {
+        display: block;
+        font: 400 38px/40px "Univers Next W01 Light", "Helvetica Neue", "Helvetica", Arial, sans-serif;
         
-        .ProductLink {
-            display: inline-block;
-            font-family: "Proxima N W01 Smbd";
-            letter-spacing: 0px;
-            margin-top: 0px;
-            margin-bottom: 20px;
-            text-transform: none;
-            font-size: 15px;
-            color:black;    
-            padding-right: 40px;     
-            border-left: 0px solid black;
-        }
+        letter-spacing: -0.95px;
+        width: 40%;
+
+        color: black;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        font-size: 25px;            
+        margin-bottom: 25px;
+    }
+    
+    .SectionTitle1 {
+        display: none;
+        font-family: "Univers Next W01 Bold";
+        color: black;
+        letter-spacing: -0.15000000596046448px;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        font-size: 15px;            
+        margin-bottom: 25px;
+    }
+    
+    .SectionTitle2 {
+        font-family: "Univers Next W01 Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        letter-spacing: -0.15px;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        color: rgb(24, 24, 24);
+        font-size: 15px;            
+
+        margin-top: 0px;
+        margin-bottom: 0px;
         
-        .ProductLink:hover {
-            color: #aaa;
-        }
+        padding-top: 0px;
+        padding-bottom: 8px;
+
+        border: 0px solid #ddd;
+        max-width: 380px;
+    }
+
+    .SectionContent {
+        font-family: "Univers Next W01 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        letter-spacing: -0.15px;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        color: rgb(24, 24, 24);
+        font-size: 15px;  
+ 
+        line-height: 1.5em;
+        margin-bottom: 40px;
         
-        .ProductLink::before { 
-            font-family: "Proxima N W01 Reg"; 
-            content: "|";
-            padding-right: 10px;
-            color: #aaa;
-        }
+        max-width: 600px;
+       
+        margin-top: 0px;
+        padding-top: 0px;
+        padding-left: 0px;
+    }
 
-        .ProductImage {
-            padding-top: 20px;
-            width: 100%;
-            max-width: 600px;
-            filter: grayscale(95%);
-            opacity: 0.85;
-        }
-
-
-        .ContentTitle {
-            font-family: "Proxima N W01 Reg";
-            text-transform: uppercase;
-            letter-spacing: 3px;
-
-            font-size: 16px;
-            font-weight: 300;
-            color: #000;
-
-            letter-spacing: 2px;
-            margin-top: 40px;
-            padding-top: 10px;
-        }
-
-        a {
-            font-family: "Proxima N W01 Smbd";
-            text-decoration: none;
-            color: #999;
-        }
-
-        a:hover {
-            color: #000;
-            text-decoration: none;
-        }
-
-        li {
-            line-height: 1.2em;
-            padding-left: 20px;
-            margin-left: 0px;
-            margin-bottom: 7px;
-            text-transform: lowercase;
-        }
-
-        li:before {
-            content: "·";
-            padding-right: 5px;
-        }
-
-        ul {
-            list-style: none;
-            margin-left: 0;
-            padding-left: 1em;
-            text-indent: -1em;
-        }
-
-        .AppIcon {
-            display: none;
-            position: absolute;
-            left: 10%;
-            top: 80px;
-            width: 65px;
-            height: auto;
-            padding-bottom: 30px;
-            margin-bottom: 10px;
-            opacity: 0.1;
-        }
+    .HPageMenus {
+        display: block;
+        margin-top: 20px;
         
+        margin-bottom: 0px;
+        padding-top: 0px;
+        padding-left: 0px;
+        text-align: left;
+        padding-bottom: 0px;
+        border-left: 0px solid #ccc;
+        line-height: 0.9em;
+        white-space: nowrap;
+    }
+
+    .HPageMenu {
+        display: inline-block;
         
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+        color: rgb(34, 34, 34);
+        font-family: "Univers Next W01 Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        font-stretch: normal;
+        font-style: normal;
+        font-variant-caps: normal;
+        font-weight: normal;
+        height: 20px;
+        letter-spacing: -0.14000000059604645px;
+        line-height: 20px;
+        margin-bottom: 20px;
+        text-align: start;
+        text-rendering: optimizeLegibility;
+
+        color: #aaa;
+
+        text-transform: none;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        text-align: left;
+        width: auto;
+        /*
+        min-width: 120px;
+        max-width: 90px;
+        */
+
+        padding-top: 3px;
+        padding-bottom: 5px;
+        padding-left: 0px;
+        padding-right: 40px;
+
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+
+        border-bottom: 0px solid #bbb;
+        border-top: 0px solid #aaa;
+        border-left: 0px solid #aaa;
+        transition: 0.2s ease-in-out;
+        margin-right: 20px;
+    }
+
+    .HPageMenu:hover {
+        color: black;
+    }
+
+    .HPageMenu_Selected {
+        /* "Univers Next W01 Bold", */
+        font-family:   "Univers Next W01 Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: black;
+        border-bottom: 0px solid black;
+    }
+
+    .List {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        padding-left: 0px;
+    }
+
+    .ListItem {
+        line-height: 1.1em;
+
+        margin-left: 0px;
+        padding-left: 0px;
+        
+        margin-bottom: 7px;
+    }
+
+    /*
+    ListItem:before {
+        content: "·";
+        padding-left: 0px;
+    }
+    */
+ 
+    
+    .Diagram {
+        display: inline-block;
+        font-family: "Univers Next W01 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: black;
+        padding: 0px;
+
+        width: -webkit-fit-content; 
+        margin-top: 30px;       
+    }
+       
+    .DiagramSection {
+        display: inline-block;
+        font-family: "Univers Next W01 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: black;
+        padding: 0px;
+        width: -webkit-fit-content;        
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+        
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .Label {
+        display: inline-block;
+        font-family: "Univers Next W01 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: black;
+        padding: 20px;
+        width: -webkit-fit-content;
+        border: 0px solid #999;
+        min-width: 150px;
+    }
+        
+    .Box {
+        display: inline-block;
+        font-family: "Univers Next W01 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: #999;
+        padding: 5px;
+        width: -webkit-fit-content;
+        border: 1px solid #999;
+        min-width: 30px;
+        text-align: center;
+        margin: 10px;
+    }
+    
+    
+
+    
+    
