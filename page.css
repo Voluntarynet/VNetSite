@@ -20,13 +20,13 @@
         position: absolute;
         overflow-x: hidden;
         overflow-y: scroll;
-        top: 0px;
-        left: 0px;
+        top: 0em;
+        left: 0em;
         height: 100%;
         width: 100%;
-        padding: 0px;
-        margin: 0px;
-        border: 0px;
+        padding: 0em;
+        margin: 0em;
+        border: 0em;
         background-color: #fff;
         zoom: 100%;
 
@@ -39,6 +39,7 @@
         font-family: "Proxima N W01 Thin Reg", "Helvetica", "Sans-Serif";
         /* -webkit-font-smoothing: antialiased;*/
         color: white;
+        font-size: 1vw;
     }
     
     
@@ -46,29 +47,29 @@
         display: block;
         overflow: hidden;
         position: fixed;
-        left: 0px;
-        top: 0px;
+        left: 0em;
+        top: 0em;
         min-width: 100%;
         text-align: left;
         
-        padding-left: 0px;
-        padding-right: 0px;
+        padding-left: 0em;
+        padding-right: 0em;
 
         background: white;
-        border: 0px dashed red;
+        border: 0em dashed red;
     }
     
     .HeaderContent {
         display: block;
         width: auto;
         text-align: left;
-        margin-left: 50px;
-        margin-right: 50px;
+        margin-left: 5em;
+        margin-right: 5em;
 
-        padding-top: 65px;
-        padding-bottom: 30px;            
-        padding-left: 0px;
-        padding-right: 0px;
+        padding-top: 5em;
+        padding-bottom: 1em;            
+        padding-left: 0em;
+        padding-right: 0em;
 
         text-align: left;
         background: white;
@@ -77,19 +78,21 @@
     
 
     .Page {
-        /* background-color: rgb(248, 248, 248);*/
+        /*
+        background-color: rgb(248, 248, 248);
+        */
 
         height: auto;
         margin-left: auto;
         margin-right: auto;
         
-        margin-top: 0px;
-        margin-bottom: 0px;
+        margin-top: 0em;
+        margin-bottom: 0em;
 
-        padding-left: 50px;
-        padding-right: 50px;
-        padding-top: 230px;
-        padding-bottom: 0px;
+        padding-left: 5em;
+        padding-right: 5em;
+        padding-top: 15.5em;
+        padding-bottom: 0em;
         
         text-align: left;
 
@@ -97,8 +100,8 @@
     }
 
     .PageHeader {
-        margin: 0px;
-        padding-bottom: 0px;
+        margin: 0em;
+        padding-bottom: 0em;
         text-align: left;
         border-bottom: 0px #555 solid;
     }
@@ -108,40 +111,37 @@
         font-size: 1.9em;
         color: #000;
         text-transform: uppercase;
-        letter-spacing: 2px;
+        letter-spacing: 0.2em;
         border: 0px dashed yellow;
         white-space: nowrap;
-        padding-bottom: 5px;
-        /*padding-bottom: 25px;*/
+        padding-bottom: 0.2em;
+        margin-bottom: 1em;
     }
 
     .PageTitleSuffix {
         font-family: "Proxima N W01 Light", "Open Sans", "Helvetica", "Sans-Serif";
         display: inline-block;
         color: #bbb;
-        margin-left: 6px;
+        margin-left: 0.15em;
     }
 
     .PageTagline {
         font-family: "Proxima N W01 Reg", "Open Sans", "Helvetica", "Sans-Serif";
         display: block;
         color: #bbb;
-        margin-top: 20px;
+        margin-top: 0.125em;
         margin-bottom: 2.5em;
-        font-size: 15px;
         line-height: 1.5;
-
     }
     
     .PageSubtitle {
         font-family: "Proxima N W01 Smbd", "Open Sans", "Helvetica", "Sans-Serif";
         display: block;
-        letter-spacing: 0.5px;
+        letter-spacing: 0.1em;
         color: #000;
-        font-size: 15px;
         text-transform: capitalize;
-        margin-top: 20px;
-        margin-bottom: 40px;
+        margin-top: 2em;
+        margin-bottom: 4em;
         /*
         -webkit-font-smoothing: antialiased;
         */
@@ -160,8 +160,8 @@
     .PageSubtitleComponentDivider {
         display: inline-block;
         color: #aaa;
-        padding-left: 8px;
-        padding-right: 8px;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
     }
     
     .PageSubtitleComponent_Selected {
@@ -170,9 +170,9 @@
     }
 
     .ProductImage {
-        padding-top: 20px;
+        padding-top: 1em;
         width: 100%;
-        max-width: 600px;
+        max-width: 37em;
         filter: grayscale(95%);
         opacity: 0.85;
     }
@@ -181,7 +181,7 @@
         font-family: "Univers Next W01 Medium";
         text-decoration: none;
         color: #999;
-        letter-spacing: -0.5px;
+        letter-spacing: 0.0em;
     }
 
     a:hover {
@@ -191,14 +191,14 @@
 
     li {
         line-height: 1.2em;
-        padding-left: 20px;
-        margin-left: 0px;
-        margin-bottom: 7px;
+        padding-left: 1.1em;
+        margin-left: 0em;
+        margin-bottom: 0.3em;
     }
 
     li:before {
         content: "·";
-        padding-right: 5px;
+        padding-right: 0.3em;
     }
 
     ul {
@@ -212,11 +212,11 @@
         display: none;
         position: absolute;
         left: 10%;
-        top: 80px;
-        width: 65px;
+        top: 4em;
+        width: 4em;
         height: auto;
-        padding-bottom: 30px;
-        margin-bottom: 10px;
+        padding-bottom: 2em;
+        margin-bottom: 0.6em;
         opacity: 0.1;
     }
     
@@ -226,25 +226,13 @@
     .PageTagline {
         display: none;
     }
-
-    /*
-     .VSection2 {
-        margin-top: 0px;
-        margin-bottom: 25px;
-        
-        padding-top: 0px;
-        padding-left: 20px;   
-        
-        border-left: 1px solid #ddd;
-    }
-    */
            
     .VSection {
-        margin-top: 0px;
-        margin-bottom: 25px;
+        margin-top: 0em;
+        margin-bottom: 1.2em;
         
-        padding-top: 0px;
-        padding-left: 0px;   
+        padding-top: 0em;
+        padding-left: 0em;   
         
         border-left: 0px solid #ddd;
     }
@@ -253,72 +241,67 @@
         display: block;
         font: 400 38px/40px "Univers Next W01 Light", "Helvetica Neue", "Helvetica", Arial, sans-serif;
         
-        letter-spacing: -0.95px;
+        letter-spacing: 0em;
         width: 40%;
 
         color: black;
         -webkit-font-smoothing: antialiased;
         text-rendering: optimizeLegibility;
-        font-size: 25px;            
-        margin-bottom: 25px;
+        margin-bottom: 1.5em;
     }
     
     .SectionTitle1 {
         display: none;
         font-family: "Univers Next W01 Bold";
         color: black;
-        letter-spacing: -0.15000000596046448px;
+        /* letter-spacing: -0.15px; */
         -webkit-font-smoothing: antialiased;
         text-rendering: optimizeLegibility;
-        font-size: 15px;            
-        margin-bottom: 25px;
+        margin-bottom: 1.5em;
     }
     
     .SectionTitle2 {
         font-family: "Univers Next W01 Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        letter-spacing: -0.15px;
+        /* letter-spacing: -0.15px; */
         -webkit-font-smoothing: antialiased;
         text-rendering: optimizeLegibility;
         color: rgb(24, 24, 24);
-        font-size: 15px;            
-
-        margin-top: 0px;
-        margin-bottom: 0px;
+        margin-top: 0em;
+        margin-bottom: 0em;
         
-        padding-top: 0px;
-        padding-bottom: 8px;
+        padding-top: 0em;
+        padding-bottom: 0.4em;
 
         border: 0px solid #ddd;
-        max-width: 380px;
+        max-width: 23.75em;
     }
 
     .SectionContent {
         font-family: "Univers Next W01 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        letter-spacing: -0.15px;
+        /*letter-spacing: -0.15px; */
         -webkit-font-smoothing: antialiased;
         text-rendering: optimizeLegibility;
         color: rgb(24, 24, 24);
-        font-size: 15px;  
  
         line-height: 1.5em;
-        margin-bottom: 40px;
+        margin-bottom: 3em;
         
-        max-width: 600px;
+        max-width: 37em;
        
-        margin-top: 0px;
-        padding-top: 0px;
-        padding-left: 0px;
+        margin-top: 0em;
+        padding-top: 0em;
+        padding-left: 0em;
     }
 
     .HPageMenus {
         display: block;
-        margin-top: 20px;
+        margin-top: 1.1em;
         
-        margin-bottom: 0px;
-        padding-top: 0px;
-        padding-left: 0px;
+        margin-bottom: 0em;
+        padding-top: 0em;
+        padding-left: 0em;
         text-align: left;
-        padding-bottom: 0px;
+        padding-bottom: 0em;
         border-left: 0px solid #ccc;
         line-height: 0.9em;
         white-space: nowrap;
@@ -331,44 +314,37 @@
         box-sizing: border-box;
         color: rgb(34, 34, 34);
         font-family: "Univers Next W01 Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: 15px;
         font-stretch: normal;
         font-style: normal;
         font-variant-caps: normal;
         font-weight: normal;
-        height: 20px;
-        letter-spacing: -0.14000000059604645px;
-        line-height: 20px;
-        margin-bottom: 20px;
+        height: 1.25em;
+        /*letter-spacing: -0.14px;*/
+        line-height: 1.25em;
+        margin-bottom: 1.25em;
         text-align: start;
         text-rendering: optimizeLegibility;
 
         color: #aaa;
 
         text-transform: none;
-        font-size: 14px;
-        letter-spacing: 0.5px;
         text-align: left;
         width: auto;
-        /*
-        min-width: 120px;
-        max-width: 90px;
-        */
 
-        padding-top: 3px;
-        padding-bottom: 5px;
-        padding-left: 0px;
-        padding-right: 40px;
+        padding-top: 0.2em;
+        padding-bottom: 0.3em;
+        padding-left: 0em;
+        padding-right: 2.5em;
 
-        margin-top: 0px;
-        margin-bottom: 0px;
-        margin-left: 0px;
+        margin-top: 0em;
+        margin-bottom: 0em;
+        margin-left: 0em;
 
         border-bottom: 0px solid #bbb;
         border-top: 0px solid #aaa;
         border-left: 0px solid #aaa;
-        transition: 0.2s ease-in-out;
-        margin-right: 20px;
+        transition: 0.2s ease-in-out opacity;
+        margin-right: 2.1em;
     }
 
     .HPageMenu:hover {
@@ -383,25 +359,25 @@
     }
 
     .List {
-        margin-top: 0px;
-        margin-bottom: 0px;
-        padding-top: 0px;
-        padding-left: 0px;
+        margin-top: 0em;
+        margin-bottom: 0em;
+        padding-top: 0em;
+        padding-left: 0em;
     }
 
     .ListItem {
-        line-height: 1.1em;
+        line-height: 1.3em;
 
-        margin-left: 0px;
-        padding-left: 0px;
+        margin-left: 0em;
+        padding-left: 0em;
         
-        margin-bottom: 7px;
+        margin-bottom: 0.2em;
     }
 
     /*
     ListItem:before {
         content: "·";
-        padding-left: 0px;
+        padding-left: 0em;
     }
     */
  
@@ -410,45 +386,45 @@
         display: inline-block;
         font-family: "Univers Next W01 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
         color: black;
-        padding: 0px;
+        padding: 0em;
 
         width: -webkit-fit-content; 
-        margin-top: 30px;       
+        margin-top: 2em;       
     }
        
     .DiagramSection {
         display: inline-block;
         font-family: "Univers Next W01 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
         color: black;
-        padding: 0px;
+        padding: 0em;
         width: -webkit-fit-content;        
         border-bottom: 1px solid #ddd;
         text-align: left;
         
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin-top: 2em;
+        margin-bottom: 2em;
     }
 
     .Label {
         display: inline-block;
         font-family: "Univers Next W01 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
         color: black;
-        padding: 20px;
+        padding: 3em;
         width: -webkit-fit-content;
         border: 0px solid #999;
-        min-width: 150px;
+        min-width: 10em;
     }
         
     .Box {
         display: inline-block;
         font-family: "Univers Next W01 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
         color: #999;
-        padding: 5px;
+        padding: 0.5em;
         width: -webkit-fit-content;
         border: 1px solid #999;
-        min-width: 30px;
+        min-width: 3em;
         text-align: center;
-        margin: 10px;
+        margin: 1em;
     }
     
     
