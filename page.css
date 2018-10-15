@@ -92,7 +92,7 @@
         padding-left: 5em;
         padding-right: 5em;
         padding-top: 15.5em;
-        padding-bottom: 0em;
+        padding-bottom: 2em;
         
         text-align: left;
 
@@ -270,6 +270,22 @@
         margin-bottom: 0em;
         
         padding-top: 0em;
+        padding-bottom: 0.4em; /* 0.4em */
+
+        border: 0px solid #ddd;
+        max-width: 23.75em;
+    }
+    
+    .SectionTitle3 {
+        font-family: "Univers Next W01 Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        /* letter-spacing: -0.15px; */
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        color: #444;
+        margin-top: 0em;
+        margin-bottom: 0em;
+        
+        padding-top: 0em;
         padding-bottom: 0.4em;
 
         border: 0px solid #ddd;
@@ -334,7 +350,7 @@
         padding-top: 0.2em;
         padding-bottom: 0.3em;
         padding-left: 0em;
-        padding-right: 2.5em;
+        padding-right: 1em;
 
         margin-top: 0em;
         margin-bottom: 0em;
@@ -358,21 +374,39 @@
         border-bottom: 0px solid black;
     }
 
+/*
     .List {
         margin-top: 0em;
-        margin-bottom: 0em;
+        margin-bottom: 1.5em;
         padding-top: 0em;
         padding-left: 0em;
     }
 
     .ListItem {
         line-height: 1.3em;
-
+        margin-top: 0em;
         margin-left: 0em;
         padding-left: 0em;
-        
-        margin-bottom: 0.2em;
+        margin-bottom: 0.1em;
     }
+    */
+    
+    
+    .List {
+        margin-top: 1em;
+        margin-bottom: 1.5em;
+        padding-top: 0em;
+        padding-left: 0em;
+    }
+
+    .ListItem {
+        line-height: 1.3em;
+        margin-top: 0em;
+        margin-left: 2em;
+        padding-left: 0em;
+        margin-bottom: 0.1em;
+    }
+    
 
     /*
     ListItem:before {
