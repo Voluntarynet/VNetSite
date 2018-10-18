@@ -70,7 +70,7 @@
             Is this like Mastodon?
         </div>
         <div class="SectionContent">
-            A bit, but it's different in important ways. Mastodon is a federated Twitter-like that runs in a native app. Voluntary is browser-based decentralized platform on which a Twitter-like app is provided as an example.
+            A bit, but it's different in important ways. Mastodon is a federated Twitter-like native app. Voluntary is an in-browser decentralized platform on which a Twitter-like app is provided as an example.
         </div>
 
 
@@ -109,7 +109,7 @@
             Can the messaging model work without servers?
         </div>
         <div class="SectionContent">
-            This is a good question. The problem with the gossip-among-friends protocol is...
+            This is a good question. The problem with the gossip-among-friends protocol is the need for at least one other friend to be online when you are in order for message relaying to work. If you have many friends, this isn't an issue, but for a small number of friends the chance of another friend being online can be small. There are several possible solutions: use open relay clients, have a setting for clients to optionally relay (up to some bandwidth limit) for more than just their own friends, pay other clients to relay for you.
         </div>
     -->
 
@@ -120,17 +120,15 @@
         <div class="SectionContent">
             No. Blockchains are useful for distributed ledgers but not unnecessary and present scaling, latency, bandwidth,
             and other issues for large systems (such as messaging systems) which don't require everyone to agree on a common global state.  
-            <!--Our goal is to scale to global messaging systems levels (email, SMS, etc).-->
         </div>
         
         <div class="SectionTitle2" style="max-width: 100%;">
             Don't ISPs need to be decentralized for true decentralization?
         </div>
         <div class="SectionContent">
-            Ideally, a mesh network would be used for top-to-bottom decentralized communications system.
-            But mesh networks aren't enough in themselves as you could still have a centralized service like 
-            Facebook on top of a mesh network.
-            So we <i>also</i> need decentralized messaging networks on top of either a mesh network or the existing federated ISP system.
+            As you can build centralized apps like Facebook on top of a mesh network, 
+            a mesh network in itself doesn't make for a top-to-bottom decentralized communications system.
+            So we <i>also</i> need a decentralized identity and messaging layer, and true decentralized apps on top, in order to have a top-to-bottom decentralized communications/applications system. VoluntaryNet is one solution for those top two layers.
         </div>
 
 
@@ -141,6 +139,15 @@
             No. This is just an open source project and the goal is for everyone to run it localy in their web browser and eventually not use the voluntary.app site at all. All keys and data are stored client side. There's no ads, tokens, paywalls, etc. There may be people that want to offer always-on message relay servers for a price, but as long as you have enough friends in your network, you shouldn't need one.  
         </div>
 
+<!--
+        <div class="SectionTitle2">
+            What's the goal of the project?
+        </div>
+        <div class="SectionContent">
+            Our goal is to scale to global messaging systems levels (email, SMS, etc).
+        </div>
+         
+         -->
         
         <!-- end page section -->
     </div>
