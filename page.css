@@ -361,6 +361,8 @@
         border-left: 0px solid #aaa;
         transition: 0.2s ease-in-out opacity;
         margin-right: 2.1em;
+        
+        user-select: none;
     }
 
     .HPageMenu:hover {
