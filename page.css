@@ -376,7 +376,6 @@
         border-bottom: 0px solid black;
     }
 
-/*
     .List {
         margin-top: 0em;
         margin-bottom: 1.5em;
@@ -391,9 +390,8 @@
         padding-left: 0em;
         margin-bottom: 0.1em;
     }
-    */
     
-    
+    /*
     .List {
         margin-top: 1em;
         margin-bottom: 1.5em;
@@ -408,7 +406,8 @@
         padding-left: 0em;
         margin-bottom: 0.1em;
     }
-    
+        */
+
 
     /*
     ListItem:before {
